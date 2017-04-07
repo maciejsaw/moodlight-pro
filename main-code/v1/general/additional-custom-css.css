@@ -1,0 +1,164 @@
+/* Add font awesome rendering sharpness
+*/
+
+.fontawesome {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+/* truncate thing with attribute truncate="true" and other classes*/
+[truncate=true] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[truncate="false"] {
+  white-space: normal;
+}
+
+.handle-div {
+  cursor: ew-resize;
+}
+
+[noselect='true'] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-button-custom:checked + label + .radio-button-select .radio-button-circle,
+.radio-button-custom:checked + label + * + .radio-button-select .radio-button-circle {
+    opacity: 1;
+}
+
+textarea {
+    outline: none;
+}
+
+@keyframes yellowHighlight {
+  0% {
+    background: #ffffdd;
+  }
+  100% {
+    background: #fdfdfd;
+  }
+}
+
+.yellow-highlight {
+  animation: yellowHighlight 6s ease;
+}
+
+.is-grayed-out {
+  pointer-events: none;
+}
+
+.is-grayed-out[tooltipster] {
+  pointer-events: auto;
+}
+
+.is-grayed-out[tooltipster]:active {
+  pointer-events: none;
+}
+
+
+
+
+/* custom scroll bar */
+/*
+
+::-webkit-scrollbar {
+  width : 10px;
+  height :10px;
+  background :  #fafafa;
+}
+
+::-webkit-scrollbar:horizontal {
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-width: 1px 0;
+}
+
+::-webkit-scrollbar:vertical {
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-width: 0 1px;
+}
+
+::-webkit-scrollbar:hover {
+  background :  #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background : rgba(193, 193, 193, .8);
+  background-clip: padding-box;
+  height: 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  -webkit-border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background : rgba(193, 193, 193, 1);
+  background-clip: padding-box;
+  height: 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  -webkit-border-radius: 7px;
+}
+::-webkit-scrollbar-corner {
+  background :  #f6f6f6;
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-width: 1px 0 0 1px;
+}
+
+*/
+
+.w-webflow-badge {
+	display: none!important;
+}
+
+.initial-load-overlay {
+  display: block;
+}
+
+.bem-checkbox:hover .bem-checkbox__checkmark {
+  border-color: #72a33f;
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+[animation-spin="true"] {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 2000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 2000;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 2000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

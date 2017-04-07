@@ -3,6 +3,8 @@ var globalTempoInterval;
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 ReactiveLocalStorage.setDefaultParam('color__1', 'white');
 ReactiveLocalStorage.setDefaultParam('color__2', 'black');
+ReactiveLocalStorage.setDefaultParam('color__3', 'null');
+ReactiveLocalStorage.setDefaultParam('color__4', 'null');
 
 //we have a defined number of colors slots, each stored in separate state
 var colorIndexesInReactiveLocalStorage = [

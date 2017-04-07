@@ -1,3 +1,5 @@
+ReactiveLocalStorage.setDefaultParam('fullscreen', 'false');
+
 function enterFullscreenMode() {
     $(".left-menu").addClass('is-hidden'); 
     $('.body-wrapper').addClass('is-fullscreen');

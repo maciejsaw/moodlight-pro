@@ -1,4 +1,4 @@
-ReactiveLocalStorage.setDefaultParam('blendingColors', 'false');
+ReactiveLocalStorage.setDefaultParam('blendingColors', 'true');
 
 ReactiveLocalStorage.onParamChange('blendingColors', function(value) {
 

@@ -80,6 +80,7 @@ function initialLoadComponents(callbackFunction) {
 		});	
 	} else {
 		$(document).trigger('componentsReady');
+		if (typeof callbackFunction === 'function') { callbackFunction(); };
 		console.log('componentsReady');
 	}
 }

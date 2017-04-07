@@ -1,0 +1,1 @@
+ReactiveLocalStorage.setDefaultParam('tempo', '128');

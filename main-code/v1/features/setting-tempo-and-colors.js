@@ -17,10 +17,10 @@ function startChangingColors() {
 	}
 
 	var colorsOrder = [
-		getColor(1);
-		getColor(2);
-		getColor(3);
-		getColor(4);
+		getColor(1),
+		getColor(2),
+		getColor(3),
+		getColor(4),
 	];
 	//
 	

@@ -6,13 +6,13 @@ ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
 function startChangingColorsWithTempo() {
 
+	var tempo = ReactiveLocalStorage.getParam('tempo');
+	var tempoInMilliseconds = 60000/tempo
+
 	var colorsOrder = [
 		'white',
 		'black'
 	];
-
-	var tempo = ReactiveLocalStorage.getParam('tempo');
-	var tempoInMilliseconds = 60000/tempo
 	
 	var colorIndex = 0; 
 	clearInterval(globalTempoInterval);

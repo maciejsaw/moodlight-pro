@@ -33,7 +33,7 @@ function getColors() {
 function startChangingColors() {
 
 	var tempo = ReactiveLocalStorage.getParam('tempo');
-	var tempoInMilliseconds = 60000/tempo
+	var tempoInMilliseconds = 60000/tempo;
 
 	var colorsOrder = getColors();	
 	var colorIndex = 0; 

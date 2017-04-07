@@ -25,6 +25,6 @@ $(document).on('preloadingComplete', function() { //need to wait for all the aja
         //default state is the first from the dropdown list
         var firstAvailableChoice = $(this).find('[choice-value]').attr('choice-value');
         ReactiveLocalStorage.setDefaultParam(paramToChange, firstAvailableChoice );
-    }
+    });
 
 });

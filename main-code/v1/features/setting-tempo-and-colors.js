@@ -2,18 +2,17 @@ var globalTempoInterval;
 
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
+//we have a defined number of colors slots, each stored in separate state
+var colorIndexesInReactiveLocalStorage = [
+	1,
+	2,
+	3,
+	4,
+];
 
 function getColors() {
 
 	//we filter the stored state colors and leave only values
-
-	var colorIndexesInReactiveLocalStorage = [
-		1,
-		2,
-		3,
-		4,
-	];
-
 	var resultColorsTable = [];
 
 	$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
@@ -61,6 +60,15 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
 		startChangingColors();
 	}
+});
+
+//updating colors when changing them
+$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
+	ReactiveLocalStorage.onParamChange('color__'+arrayIndex, function(value) {
+		if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+			startChangingColors();
+		}
+	});
 });
 
 //validating tempo input?

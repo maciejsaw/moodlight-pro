@@ -67,13 +67,18 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	}
 });
 
-//updating colors when changing them
-$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
-	ReactiveLocalStorage.onParamChange('color__'+arrayValue+'', function(value) {
-		if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
-			startChangingColors();
-		}
+function onColorChangeWhenStarted(callbackFunction) {
+	$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
+		ReactiveLocalStorage.onParamChange('color__'+arrayValue+'', function(value) {
+			if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+				callbackFunction(value);
+			}
+		});
 	});
+}
+
+onColorChangeWhenStarted(function() {
+	startChangingColors();
 });
 
 //validating tempo input?

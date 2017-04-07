@@ -22,7 +22,6 @@ function startChangingColors() {
 		getColor(3),
 		getColor(4),
 	];
-	//
 	
 	var colorIndex = 0; 
 

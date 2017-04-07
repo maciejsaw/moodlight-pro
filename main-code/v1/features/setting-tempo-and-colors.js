@@ -11,6 +11,8 @@ function startChangingColors() {
 		var color = ReactiveLocalStorage.getParam('color__'+colorIndex);
 		if (typeof color !== 'undefined') {
 			return color;
+		} else if (color === 'null') {
+			return null;
 		} else {
 			return null;
 		}

@@ -3,7 +3,6 @@ var globalTempoInterval;
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
 var colorsOrder = [
-	'red',
 	'white',
 	'black'
 ];

@@ -16,6 +16,7 @@ function startChangingColorsWithTempo(colorsOrder, tempo) {
 
 	var tempoInMilliseconds = 60000/tempo
 
+	clearInterval(globalTempoInterval);
 	globalTempoInterval = setInterval(function() {
 		var colorToSet = colorsOrder[colorIndex];
 		$('.main-visualisations__fullscreen-color').css('background-color', colorToSet);

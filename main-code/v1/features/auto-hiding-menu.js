@@ -57,6 +57,7 @@ $(document).on('click touchstart', '.body-wrapper', function() {
 $(document).on('click touchstart', '.main-visualisations', function() {
     console.log('click');
     if (ReactiveLocalStorage.getParam('fullscreen') == 'false') {
+        console.log('click');
         enterFullscreenMode();
     }
 });

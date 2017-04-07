@@ -16,7 +16,7 @@ function getColors() {
 	var resultColorsTable = [];
 
 	$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
-		var color = ReactiveLocalStorage.getParam('color__'+arrayIndex);
+		var color = ReactiveLocalStorage.getParam('color__'+arrayValue);
 		if (typeof color !== 'undefined' && color !== 'null') {
 			resultColorsTable.push(color);
 		}

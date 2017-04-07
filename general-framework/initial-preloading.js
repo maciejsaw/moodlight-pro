@@ -55,6 +55,7 @@ function initialLoadModalsContent(callbackFunction) {
 		});	
 	} else {
 		$(document).trigger('modalsReady');
+		console.log('modalsReady');
 	}
 
 }

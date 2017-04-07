@@ -1,4 +1,5 @@
 var globalTempoInterval;
+
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
 function startChangingColors() {
@@ -32,5 +33,13 @@ function stopChangingColors() {
 ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
 		startChangingColors();
+	}
+});
+
+//validating tempo input?
+ReactiveLocalStorage.onParamChange('tempo', function(value) {
+	//if user enteres wrong tempo, we reset to 128
+	if (!isNaN(value)) {
+		ReactiveLocalStorage.setParam('tempo', '128');
 	}
 });

@@ -12,3 +12,9 @@ ReactiveLocalStorage.onParamChange('blendingColors', function(value) {
 		$('.main-visualisations__fullscreen-color').removeClass('is-blended');
 	}
 });
+
+ReactiveLocalStorage.onParamChange('tempo', function(value) {
+	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+		ReactiveLocalStorage.retriggerOnParamChange('blendingColors');
+	}
+});

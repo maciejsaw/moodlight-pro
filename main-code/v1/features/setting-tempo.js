@@ -29,4 +29,5 @@ function startChangingColorsWithTempo(colorsOrder, tempo) {
 
 function stopChangingColors() {
 	clearInterval(globalTempoInterval);
+	$('.main-visualisations__fullscreen-color').attr('style', '');
 }

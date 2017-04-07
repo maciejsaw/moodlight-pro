@@ -8,7 +8,7 @@ $(document).on('click', '[action-stop]', function() {
 
 ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 	if (value === 'started') {
-		startChangingColorsWithTempo(colorsOrder, tempo);
+		startChangingColorsWithTempo();
 		$('[action-start]').addClass('is-hidden');
 		$('[action-stop]').removeClass('is-hidden');
 	} else {

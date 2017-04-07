@@ -33,7 +33,6 @@ function stopChangingColors() {
 
 ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
-		var tempo = value;
-		startChangingColorsWithTempo(colorsOrder, tempo);
+		startChangingColors();
 	}
 });

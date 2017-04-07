@@ -27,12 +27,12 @@ $('body').on('mousemove', '.body-wrapper', function(event) {
         mouseMovementHideTimer = setTimeout(function(){ 
             enterFullscreenMode();
             mouseMovementCounter = 0;
-        }, 9000);
+        }, 4000);
     }
 
     mouseMovementShowTimer = setTimeout(function(){ 
         mouseMovementCounter = 0;
-    }, 9000);
+    }, 4000);
 
 });
 

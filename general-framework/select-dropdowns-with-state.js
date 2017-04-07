@@ -10,7 +10,7 @@ $(document).on('preloadingComplete', function() { //need to wait for all the aja
         hideWebflowDropdowns();
     });
 
-    $('[action-select-dropdown]').each(function() {
+    $('[action-select-dropdown]').not('[skip-setting-first-choice-as-default-value]')each(function() {
         var paramToChange = $(this).attr('action-select-dropdown');
         
         //default state is the first from the dropdown list

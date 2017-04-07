@@ -23,8 +23,9 @@ function startChangingColors() {
 		}
 	};
 
-	clearInterval(globalTempoInterval);
 	changeToNextColor();
+
+	clearInterval(globalTempoInterval);
 	globalTempoInterval = setInterval(function() {
 		changeToNextColor()
 	}, tempoInMilliseconds)

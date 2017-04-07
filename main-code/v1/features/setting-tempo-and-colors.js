@@ -7,7 +7,7 @@ function startChangingColors() {
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoInMilliseconds = 60000/tempo
 
-	//we want to remove the empty colors from array
+	//we want to remove the empty and undefined colors from colorsOrder
 	var getColors = function() {
 
 		var colorIndexesInReactiveLocalStorage = [

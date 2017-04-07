@@ -1,7 +1,5 @@
 var globalTempoInterval;
-
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
-
 
 function startChangingColors() {
 

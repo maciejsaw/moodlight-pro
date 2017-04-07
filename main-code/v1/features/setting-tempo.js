@@ -7,8 +7,6 @@ var colorsOrder = [
 	'black'
 ];
 
-var tempo = ReactiveLocalStorage.getParam('tempo');
-
 function startChangingColorsWithTempo(colorsOrder, tempo) {
 
 	var colorIndex = 0; 
@@ -31,3 +29,10 @@ function stopChangingColors() {
 	clearInterval(globalTempoInterval);
 	$('.main-visualisations__fullscreen-color').attr('style', '');
 }
+
+ReactiveLocalStorage.onParamChange('tempo', function(value) {
+	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+		var tempo = value;
+		startChangingColorsWithTempo(colorsOrder, tempo);
+	}
+});

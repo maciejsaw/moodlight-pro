@@ -93,6 +93,8 @@ function waitForInitialAjaxLoadingToFinishThenShowUI(eventsToWaitFor, callbackFu
 			numberOfEventsThatHappened = numberOfEventsThatHappened + 1;
 			if (numberOfEventsThatHappened === eventsToWaitFor.length) {
 				if (typeof callbackFunction === 'function') { callbackFunction(); };
+				$(document).trigger('preloadingComplete');
+				console.log('preloading complete');
 			}
 		});
 	});
@@ -102,8 +104,6 @@ function initTheUIAfterPreloading() {
 	QueryStringRouter.retriggerOnParamChangeForAll();
 	ReactiveLocalStorage.retriggerOnParamChangeForAll();
 	$('.initial-load-overlay').fadeOutAndHide(500);
-	$(document).trigger('preloadingComplete');
-	console.log('preloading complete');
 }
 
 //components should load after subapges and modals

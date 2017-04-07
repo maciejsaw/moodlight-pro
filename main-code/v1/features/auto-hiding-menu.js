@@ -45,5 +45,5 @@ $(document).on('click touchstart', '.body-wrapper', function() {
 
     mouseMovementHideTimer = setTimeout(function(){ 
         enterFullscreenMode();
-    }, 9000);
+    }, 4000);
 });

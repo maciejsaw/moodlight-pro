@@ -7,23 +7,28 @@ function startChangingColors() {
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoInMilliseconds = 60000/tempo
 
-	var getColor = function(colorIndex) {
-		var color = ReactiveLocalStorage.getParam('color__'+colorIndex);
-		if (typeof color !== 'undefined') {
-			return color;
-		} else if (color === 'null') {
-			return null;
-		} else {
-			return null;
-		}
+	var getColors = function() {
+
+		var colorIndexes = [
+			1,
+			2,
+			3,
+			4,
+		];
+
+		var resultColorsTable = [];
+
+		$.each(colorIndexes, function(arrayIndex, arrayValue) {
+			var color = ReactiveLocalStorage.getParam('color__'+arrayIndex);
+			if (typeof color !== 'undefined' && color !== 'null') {
+				resultColorsTable.push(color);
+			}
+		});
+
+		return resultColorsTable;
 	}
 
-	var colorsOrder = [
-		getColor(1),
-		getColor(2),
-		getColor(3),
-		getColor(4),
-	];
+	var colorsOrder = getColors();
 	
 	var colorIndex = 0; 
 

@@ -1,11 +1,11 @@
 function enterFullscreenMode() {
     $(".left-menu").addClass('is-hidden'); 
-    $('.main-visualisation').addClass('is-fullscreen');
+    $('.body-wrapper').addClass('is-fullscreen');
 }
 
 function exitFullscreenMode() {
     $('.left-menu').removeClass('is-hidden'); 
-    $('.main-visualisation').removeClass('is-fullscreen');
+    $('.body-wrapper').removeClass('is-fullscreen');
 }
 
 var mouseMovementHideTimer;

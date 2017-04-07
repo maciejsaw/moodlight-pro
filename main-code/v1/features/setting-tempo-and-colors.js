@@ -2,33 +2,36 @@ var globalTempoInterval;
 
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
+
+function getColors() {
+
+	//we filter the stored state colors and leave only values
+
+	var colorIndexesInReactiveLocalStorage = [
+		1,
+		2,
+		3,
+		4,
+	];
+
+	var resultColorsTable = [];
+
+	$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
+		var color = ReactiveLocalStorage.getParam('color__'+arrayIndex);
+		if (typeof color !== 'undefined' && color !== 'null') {
+			resultColorsTable.push(color);
+		}
+	});
+
+	return resultColorsTable;
+}
+
 function startChangingColors() {
 
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoInMilliseconds = 60000/tempo
 
 	//we want to remove the empty and undefined colors from colorsOrder
-	var getColors = function() {
-
-		var colorIndexesInReactiveLocalStorage = [
-			1,
-			2,
-			3,
-			4,
-		];
-
-		var resultColorsTable = [];
-
-		$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
-			var color = ReactiveLocalStorage.getParam('color__'+arrayIndex);
-			if (typeof color !== 'undefined' && color !== 'null') {
-				resultColorsTable.push(color);
-			}
-		});
-
-		return resultColorsTable;
-	}
-
 	var colorsOrder = getColors();
 	
 	var colorIndex = 0; 

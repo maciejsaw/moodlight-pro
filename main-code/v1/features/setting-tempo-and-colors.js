@@ -7,9 +7,10 @@ function startChangingColors() {
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoInMilliseconds = 60000/tempo
 
+	//we want to remove the empty colors from array
 	var getColors = function() {
 
-		var colorIndexes = [
+		var colorIndexesInReactiveLocalStorage = [
 			1,
 			2,
 			3,
@@ -18,7 +19,7 @@ function startChangingColors() {
 
 		var resultColorsTable = [];
 
-		$.each(colorIndexes, function(arrayIndex, arrayValue) {
+		$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
 			var color = ReactiveLocalStorage.getParam('color__'+arrayIndex);
 			if (typeof color !== 'undefined' && color !== 'null') {
 				resultColorsTable.push(color);

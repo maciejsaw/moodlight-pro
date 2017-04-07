@@ -20,7 +20,7 @@ var scriptsToLoad = [
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/checkboxes-binded-to-reactive-local-storage.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/data-binding-and-data-lists.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/initial-preloading.js", //preloading needs to be after other framework files
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/setting-tempo.js",
+	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/setting-tempo-and-colors.js",
 	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/starting-and-stopping.js",
 	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/auto-hiding-menu.js",
 

@@ -3,8 +3,7 @@ var globalTempoInterval;
 ReactiveLocalStorage.setDefaultParam('tempo', '128');
 
 
-
-function startChangingColorsWithTempo() {
+function startChangingColors() {
 
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoInMilliseconds = 60000/tempo

@@ -52,3 +52,23 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 		ReactiveLocalStorage.setParam('tempo', '128');
 	}
 });
+
+function multiplyTempo(factor) {
+	var currentTempo = ReactiveLocalStorage.getParam('tempo');
+	var updatedTempo = currentTempo*factor;
+	ReactiveLocalStorage.setParam('tempo', updatedTempo);
+}
+
+function divideTempo(factor) {
+	var currentTempo = ReactiveLocalStorage.getParam('tempo');
+	var updatedTempo = currentTempo/factor;
+	ReactiveLocalStorage.setParam('tempo', updatedTempo);
+}
+
+$(document).on('click', '[action-tempo-multiply-2]', function() {
+	multiplyTempo(2);
+});
+
+$(document).on('click', '[action-tempo-divide-2]', function() {
+	divideTempo(2);
+});

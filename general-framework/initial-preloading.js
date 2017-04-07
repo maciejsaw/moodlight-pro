@@ -32,6 +32,7 @@ function initialLoadHtmlsubpages(callbackFunction) {
 		});	
 	} else {
 		$(document).trigger('subpagesReady');
+		console.log('subpagesReady');
 	}
 
 }

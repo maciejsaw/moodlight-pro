@@ -1,11 +1,13 @@
 function enterFullscreenMode() {
     $(".left-menu").addClass('is-hidden'); 
     $('.body-wrapper').addClass('is-fullscreen');
+    ReactiveLocalStorage.setParam('fullscreen', 'true');
 }
 
 function exitFullscreenMode() {
     $('.left-menu').removeClass('is-hidden'); 
     $('.body-wrapper').removeClass('is-fullscreen');
+    ReactiveLocalStorage.setParam('fullscreen', 'false');
 }
 
 var mouseMovementHideTimer;
@@ -38,12 +40,21 @@ $('body').on('mousemove', '.body-wrapper', function(event) {
 
 //also show bar on clicks
 $(document).on('click touchstart', '.body-wrapper', function() {
-    clearTimeout(mouseMovementHideTimer);
-    clearTimeout(mouseMovementShowTimer);
+    if (ReactiveLocalStorage.getParam('fullscreen') == 'true') {
+        clearTimeout(mouseMovementHideTimer);
+        clearTimeout(mouseMovementShowTimer);
 
-    exitFullscreenMode();
+        exitFullscreenMode();
 
-    mouseMovementHideTimer = setTimeout(function(){ 
-        enterFullscreenMode();
-    }, 4000);
+        mouseMovementHideTimer = setTimeout(function(){ 
+            enterFullscreenMode();
+        }, 4000);
+    }
 });
+
+$(document).on('click touchstart', '.main-visualisations', function() {
+    if (ReactiveLocalStorage.getParam('fullscreen') == 'false') {
+        enterFullscreenMode();
+    }
+});
+

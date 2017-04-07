@@ -10,12 +10,8 @@ $(document).on('preloadingComplete', function() { //need to wait for all the aja
         hideWebflowDropdowns();
     });
 
-    $('[action-select-dropdown]').not('[skip-setting-first-choice-as-default-value]')each(function() {
+    $('[action-select-dropdown]').each(function() {
         var paramToChange = $(this).attr('action-select-dropdown');
-        
-        //default state is the first from the dropdown list
-        var firstAvailableChoice = $(this).find('[choice-value]').attr('choice-value');
-        ReactiveLocalStorage.setDefaultParam(paramToChange, firstAvailableChoice );
 
         ReactiveLocalStorage.onParamChange(paramToChange, function(value) {
             var chosenItem = $('[action-select-dropdown="'+paramToChange+'"]').find('[chosen-value="'+value+'"]');
@@ -24,5 +20,11 @@ $(document).on('preloadingComplete', function() { //need to wait for all the aja
             otherNotChosenItems.addClass('is-hidden');
         });
     });
+
+    $('[action-select-dropdown]').not('[skip-setting-first-available-value-as-default]').each(function() {
+        //default state is the first from the dropdown list
+        var firstAvailableChoice = $(this).find('[choice-value]').attr('choice-value');
+        ReactiveLocalStorage.setDefaultParam(paramToChange, firstAvailableChoice );
+    }
 
 });

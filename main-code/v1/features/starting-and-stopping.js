@@ -9,7 +9,12 @@ $(document).on('click', '[action-stop]', function() {
 ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 	if (value === 'started') {
 		startChangingColorsWithTempo(colorsOrder, tempo);
+		$('[action-start]').addClass('is-hidden');
+		$('[action-stop]').removeClass('is-hidden');
 	} else {
 		stopChangingColors();
+		$('[action-start]').removeClass('is-hidden');
+		$('[action-stop]').addClass('is-hidden');
 	}
 });
+

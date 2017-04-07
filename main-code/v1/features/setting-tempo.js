@@ -13,14 +13,20 @@ function startChangingColors() {
 	];
 	
 	var colorIndex = 0; 
-	clearInterval(globalTempoInterval);
-	globalTempoInterval = setInterval(function() {
+
+	var changeToNextColor = function() {
 		var colorToSet = colorsOrder[colorIndex];
 		$('.main-visualisations__fullscreen-color').css('background-color', colorToSet);
 		colorIndex = colorIndex + 1;
 		if (colorIndex >= colorsOrder.length) {
 			colorIndex = 0;
 		}
+	};
+
+	clearInterval(globalTempoInterval);
+	changeToNextColor();
+	globalTempoInterval = setInterval(function() {
+		changeToNextColor()
 	}, tempoInMilliseconds)
 
 }

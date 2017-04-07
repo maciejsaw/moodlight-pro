@@ -39,6 +39,7 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 //validating tempo input?
 ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	//if user enteres wrong tempo, we reset to 128
+	//TODO: show error below input
 	if (!isNaN(value)) {
 		ReactiveLocalStorage.setParam('tempo', '128');
 	}

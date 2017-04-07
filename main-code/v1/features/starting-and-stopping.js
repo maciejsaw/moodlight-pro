@@ -1,7 +1,15 @@
 $(document).on('click', '[action-start]', function() {
-	startChangingColorsWithTempo(colorsOrder, tempo);
+	ReactiveLocalStorage.setParam('startedOrStopped', 'started');
 });
 
 $(document).on('click', '[action-stop]', function() {
-	stopChangingColors();
+	ReactiveLocalStorage.setParam('startedOrStopped', 'stopped');
+});
+
+ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
+	if (value === 'started') {
+		startChangingColorsWithTempo(colorsOrder, tempo);
+	} else {
+		stopChangingColors();
+	}
 });

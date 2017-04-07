@@ -79,6 +79,7 @@ function initialLoadComponents(callbackFunction) {
 		});	
 	} else {
 		$(document).trigger('componentsReady');
+		console.log('componentsReady');
 	}
 }
 

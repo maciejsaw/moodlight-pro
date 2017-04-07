@@ -64,7 +64,7 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 
 //updating colors when changing them
 $.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
-	ReactiveLocalStorage.onParamChange('color__'+arrayIndex, function(value) {
+	ReactiveLocalStorage.onParamChange('color__'+arrayValue, function(value) {
 		if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
 			startChangingColors();
 		}

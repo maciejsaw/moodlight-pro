@@ -101,3 +101,11 @@ $(document).on('click', '[action-tempo-multiply-2]', function() {
 $(document).on('click', '[action-tempo-divide-2]', function() {
 	divideTempo(2);
 });
+
+$(document).on('click', '[action-tempo-multiply-4]', function() {
+	multiplyTempo(4);
+});
+
+$(document).on('click', '[action-tempo-divide-4]', function() {
+	divideTempo(4);
+});

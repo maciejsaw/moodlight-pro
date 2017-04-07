@@ -22,6 +22,7 @@ function getColors() {
 		}
 	});
 
+	console.log(resultColorsTable);
 	return resultColorsTable;
 }
 

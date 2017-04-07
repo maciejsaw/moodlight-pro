@@ -20,14 +20,7 @@ var scriptsToLoad = [
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/checkboxes-binded-to-reactive-local-storage.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/data-binding-and-data-lists.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-framework/initial-preloading.js", //preloading needs to be after other framework files
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/listing-transactions.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/main-navigation.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/calculator-of-transaction.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/binding-exchange-input-output-amounts.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/showing-transaction-details.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/personal-data-form.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/confirm-order.js",
-	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/cancelling-transaction.js",
+	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/settings-tempo.js"
 ]; 
 
 https://maciejsaw.github.io/moodlight-pro/main-code/v1

@@ -19,7 +19,7 @@ function startChangingColorsWithTempo(colorsOrder, tempo) {
 		$('.main-visualisations__fullscreen-color').css('background-color', colorToSet);
 		colorIndex = colorIndex + 1;
 		console.log(colorIndex);
-		if (colorIndex > colorsOrder.length) {
+		if (colorIndex >= colorsOrder.length) {
 			colorIndex = 0;
 		}
 	}, tempoInMilliseconds)

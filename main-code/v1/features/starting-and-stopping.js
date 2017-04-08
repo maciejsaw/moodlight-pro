@@ -1,3 +1,5 @@
+ReactiveLocalStorage.setParam('startedOrStopped', 'stopped'); //always stop when refreshing the page
+
 $(document).on('click', '[action-start]', function() {
 	ReactiveLocalStorage.setParam('startedOrStopped', 'started');
 });

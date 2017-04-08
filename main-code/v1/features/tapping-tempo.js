@@ -41,7 +41,7 @@ var TapTempo = function(){
   }
 
   return {
-    tap: tap;  
+    tap: tap 
   }
 }
 

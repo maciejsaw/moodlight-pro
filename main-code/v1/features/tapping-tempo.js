@@ -26,8 +26,8 @@ var TapTempo = (function(){
   var refresh = function(){
     if (times.length > 2){
       var average = times.reduce(function(result, t){ return result += t }) / times.length
-      var bpm = (1 / (average / 1000)) * 60
-      $(document).trigger('tempoSetByTapping', bpm);
+      var bpm = (1 / (average / 1000)) * 60;
+      $(document).trigger('tempoSetByTapping', bpm/2);
     }
   }
 

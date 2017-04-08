@@ -4,7 +4,7 @@ function hideWebflowDropdowns() {
 }
 
 //open and close Webflow dropdowns in ajax-loaded content
-$(document).on('click', '.w-dropdown-toggle', function(event) {
+$(document).on('click tap', '.w-dropdown-toggle', function(event) {
     event.preventDefault();
 
     var thisDropdownButton = $(this);
@@ -12,8 +12,19 @@ $(document).on('click', '.w-dropdown-toggle', function(event) {
     var otherDropdownLists = $('.w-dropdown-list').not(thisDropdownList);
     var otherDropdownButtons = $('.w-dropdown-toggle').not(thisDropdownButton);
 
-    thisDropdownButton.toggleClass('w--open');
-    thisDropdownList.toggleClass("w--open");
+    var dropdownIsInitiallyOpen = thisDropdownButton.hasClass('w--open');
+
+    setTimeout(function() {
+        var dropdownIsStillOpen = thisDropdownButton.hasClass('w--open');
+        if (dropdownIsInitiallyOpen && dropdownIsStillOpen) {
+            thisDropdownButton.removeClass('w--open');
+            thisDropdownList.removeClass('w--open');
+        } else if (!dropdownIsInitiallyOpen && !dropdownIsStillOpen) {
+            thisDropdownButton.addClass('w--open');
+            hisDropdownList.addClass('w--open');
+        }
+    }, 200);
+
     otherDropdownLists.removeClass('w--open');
     otherDropdownButtons.removeClass('w--open');
 });

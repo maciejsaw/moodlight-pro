@@ -14,6 +14,7 @@ $(document).on('click tap', '.w-dropdown-toggle', function(event) {
 
     var dropdownIsInitiallyOpen = thisDropdownButton.hasClass('w--open');
 
+    //dirty fix for Webflow dropdowns events interfering
     setTimeout(function() {
         var dropdownIsStillOpen = thisDropdownButton.hasClass('w--open');
         if (dropdownIsInitiallyOpen && dropdownIsStillOpen) {

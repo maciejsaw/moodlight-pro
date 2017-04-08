@@ -21,6 +21,6 @@ $(document).on('keydown', function(e){
     } else if (e.keyCode === keyNameToCode["E"]) {
         $('[action-tempo-multiply-2]').trigger('click');
     } else if (e.keyCode === keyNameToCode["R"]) {
-        $('[action-multiply-multiply-4]').trigger('click');
+        $('[action-tempo-multiply-4]').trigger('click');
     }
 });

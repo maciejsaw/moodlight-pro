@@ -9,11 +9,11 @@ function toggleStartOrStop() {
 	}
 }
 
-$(document).on('keydown', function(e){
-	var checkIfTextInputIsInFocus = function() {
-		return $('input').is(":focus") || $('textarea').is(":focus"); 
-	};
+var checkIfTextInputIsInFocus = function() {
+	return $('input').is(":focus") || $('textarea').is(":focus"); 
+};
 
+$(document).on('keydown', function(e){
 	if( !checkIfTextInputIsInFocus() ) {
 		if (e.keyCode === keyNameToCode["Space"]) { 
 			toggleStartOrStop();

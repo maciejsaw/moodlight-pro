@@ -18,13 +18,3 @@ $(document).on('keydown', function(e){
         ////
     }
 });
-
-$(document).on('keydown', function(e){
-    if (e.keyCode === keyNameToCode["Space"]) { 
-    	toggleStartOrStop();
-    } else if (e.keyCode === 39 || e.keyCode === 83) {
-        //
-    } else if (e.keyCode === 38) { //arrow up
-        ////
-    }
-});

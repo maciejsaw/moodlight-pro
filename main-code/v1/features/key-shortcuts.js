@@ -14,7 +14,13 @@ $(document).on('keydown', function(e){
     	toggleStartOrStop();
     } else if (e.keyCode === keyNameToCode["B"]) {
         $('[action-checkbox="blendingColors"]').trigger('click');
-    } else if (e.keyCode === 38) { //arrow up
-        ////
+    } else if (e.keyCode === keyNameToCode["Q"]) {
+        $('[action-divide-tempo-4]').trigger('click');
+    } else if (e.keyCode === keyNameToCode["W"]) {
+        $('[action-divide-tempo-2]').trigger('click');
+    } else if (e.keyCode === keyNameToCode["E"]) {
+        $('[action-multiply-tempo-2]').trigger('click');
+    } else if (e.keyCode === keyNameToCode["R"]) {
+        $('[action-multiply-tempo-4]').trigger('click');
     }
 });

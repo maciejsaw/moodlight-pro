@@ -22,7 +22,7 @@ $(document).on('click tap', '.w-dropdown-toggle', function(event) {
             thisDropdownList.removeClass('w--open');
         } else if (!dropdownIsInitiallyOpen && !dropdownIsStillOpen) {
             thisDropdownButton.addClass('w--open');
-            hisDropdownList.addClass('w--open');
+            thisDropdownList.addClass('w--open');
         }
     }, 200);
 

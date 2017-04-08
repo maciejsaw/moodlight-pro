@@ -47,8 +47,6 @@ var TapTempo = function(){
 
 /* End of external script */
 
-console.log(module.exports);
-
 $(document).on('click', '[action-tap-tempo]', function() {
   TapTempo.tap();
 });

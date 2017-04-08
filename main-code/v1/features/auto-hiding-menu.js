@@ -40,8 +40,8 @@ $('body').on('mousemove', '.body-wrapper', function(event) {
 
 });
 
-//also show bar on clicks
-$(document).on('click touchstart', '.main-visualisations', function() {
+//also show bar on touchstart for mobile
+$(document).on('touchstart', '.main-visualisations', function() {
     if (ReactiveLocalStorage.getParam('fullscreen') == 'true') {
         clearTimeout(mouseMovementHideTimer);
         clearTimeout(mouseMovementShowTimer);

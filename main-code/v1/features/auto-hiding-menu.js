@@ -42,10 +42,10 @@ $('body').on('mousemove', '.body-wrapper', function(event) {
 
 //also show bar on touchstart for mobile
 $(document).on('touchstart', '.main-visualisations', function() {
+    clearTimeout(mouseMovementHideTimer);
+    clearTimeout(mouseMovementShowTimer);
+    
     if (ReactiveLocalStorage.getParam('fullscreen') == 'true') {
-        clearTimeout(mouseMovementHideTimer);
-        clearTimeout(mouseMovementShowTimer);
-
         exitFullscreenMode();
 
         mouseMovementHideTimer = setTimeout(function(){ 

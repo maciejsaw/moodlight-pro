@@ -41,7 +41,7 @@ $('body').on('mousemove', '.body-wrapper', function(event) {
 });
 
 //also show bar on clicks
-$(document).on('click touchstart', '.body-wrapper', function() {
+$(document).on('click touchstart', '.main-visualisations', function() {
     if (ReactiveLocalStorage.getParam('fullscreen') == 'true') {
         clearTimeout(mouseMovementHideTimer);
         clearTimeout(mouseMovementShowTimer);
@@ -51,14 +51,11 @@ $(document).on('click touchstart', '.body-wrapper', function() {
         mouseMovementHideTimer = setTimeout(function(){ 
             enterFullscreenMode();
         }, 4000);
-    }
-});
-
-$(document).on('click touchstart', '.main-visualisations', function(event) {
-    if (ReactiveLocalStorage.getParam('fullscreen') == 'false') {
+    } else if (ReactiveLocalStorage.getParam('fullscreen') == 'false') {
         console.log('click when not in fullscreen2');
         enterFullscreenMode();
-        event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
     }
+
+    event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
 

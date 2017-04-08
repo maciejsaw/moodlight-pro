@@ -3,7 +3,7 @@ Based on xternal script
 //https://github.com/livejs/tap-tempo/blob/master/index.js 
 */
 
-var TapTempo = function(){
+var TapTempo = (function(){
   var tapTempo;
   var timeout = 2000;
   var times = [];
@@ -43,7 +43,7 @@ var TapTempo = function(){
   return {
     tap: tap 
   }
-}
+})();
 
 /* End of external script */
 

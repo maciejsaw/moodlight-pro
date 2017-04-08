@@ -70,7 +70,7 @@ var TapTempo = (function(){
 
 
 
-$(document).on('click', '[action-tap-tempo]', function() {
+$(document).on('mousedown touchstart', '[action-tap-tempo]', function() {
   TapTempo.triggerCalculation();
 });
 

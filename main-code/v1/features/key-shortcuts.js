@@ -12,6 +12,7 @@ function toggleStartOrStop() {
 $(document).on('keydown', function(e){
     if (e.keyCode === keyNameToCode["Space"]) { 
     	toggleStartOrStop();
+    	enterFullscreenMode();
     } else if (e.keyCode === keyNameToCode["B"]) {
         $('[action-checkbox="blendingColors"]').trigger('click');
     } else if (e.keyCode === keyNameToCode[","]) {

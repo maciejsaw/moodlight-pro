@@ -25,6 +25,7 @@ var scriptsToLoad = [
 	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/auto-hiding-menu.js",
 	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/blending-colors.js",
 	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/key-shortcuts.js",
+	"https://maciejsaw.github.io/moodlight-pro/main-code/v1/features/tapping-tempo.js",
 ]; 
 
 https://maciejsaw.github.io/moodlight-pro/main-code/v1

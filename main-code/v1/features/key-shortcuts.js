@@ -11,6 +11,16 @@ function toggleStartOrStop() {
 $(document).on('keydown', function(e){
     if (e.keyCode === keyNameToCode["Space"]) { 
     	toggleStartOrStop();
+    } else if (e.keyCode === keyNameToCode["B"]) {
+        $('[action-checkbox="blendingColors"]').trigger('click');
+    } else if (e.keyCode === 38) { //arrow up
+        ////
+    }
+});
+
+$(document).on('keydown', function(e){
+    if (e.keyCode === keyNameToCode["Space"]) { 
+    	toggleStartOrStop();
     } else if (e.keyCode === 39 || e.keyCode === 83) {
         //
     } else if (e.keyCode === 38) { //arrow up

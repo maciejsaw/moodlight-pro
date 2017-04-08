@@ -63,7 +63,7 @@ var TapTempo = (function(){
 
         listOfTapsDelays.push(delayAfterPreviousTap);
       }
-    };
+    });
   };  
 
   var getAvgFromArray = function(grades) {
@@ -102,7 +102,7 @@ var TapTempo = (function(){
 /* End of external script */
 
 $(document).on('click', '[action-tap-tempo]', function() {
-  TapTempo.tap();
+  TapTempo.triggerCalculation();
 });
 
 $(document).on('tempoSetByTapping', function(event, bpm) {

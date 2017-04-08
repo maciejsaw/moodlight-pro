@@ -45,13 +45,15 @@ Based on xternal script
 //   }
 // })();
 
+/*
+
 var TapTempo = (function(){
 
   var listOfTapDates = [];
   var listOfTapsDelays = [];
 
   var pushDate = function() {
-    listOfTapsTimes.push(Date.now());
+    listOfTapDates.push(Date.now());
   };
 
   var pushDelay = function() {
@@ -99,7 +101,7 @@ var TapTempo = (function(){
 
 })();
 
-/* End of external script */
+
 
 $(document).on('click', '[action-tap-tempo]', function() {
   TapTempo.triggerCalculation();
@@ -109,3 +111,6 @@ $(document).on('tempoSetByTapping', function(event, bpm) {
   console.log(bpm);
   ReactiveLocalStorage.setParam('tempo', bpm);
 });
+
+*/
+

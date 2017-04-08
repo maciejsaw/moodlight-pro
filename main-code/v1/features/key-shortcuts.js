@@ -14,6 +14,6 @@ $(document).on('keydown', function(e){
     } else if (e.keyCode === 39 || e.keyCode === 83) {
         //
     } else if (e.keyCode === 38) { //arrow up
-        //
+        ////
     }
 });

@@ -1,22 +1,17 @@
 /*   
-External script
+Based on xternal script
 //https://github.com/livejs/tap-tempo/blob/master/index.js 
 */
 
-var EventEmitter = require('events').EventEmitter
+var TapTempo = function(){
+  var tapTempo;
+  var timeout = 2000;
+  var times = [];
 
-module.exports = function(){
-  var tapTempo = new EventEmitter()
+  var lastTime = null;
+  var lastDifference = null;
 
-  var timeout = 2000
-
-  var times = []
-
-
-  var lastTime = null
-  var lastDifference = null
-
-  tapTempo.tap = function(){
+  var tap = function(){
     var time = Date.now()
     if (lastTime){
       lastDifference = time - lastTime
@@ -25,19 +20,19 @@ module.exports = function(){
     }
     lastTime = time
     beginTimeout()
-    tapTempo.emit('tap')
+    $(document).trigger('tap');
   }
 
-  function refresh(){
+  var refresh = function(){
     if (times.length > 2){
       var average = times.reduce(function(result, t){ return result += t }) / times.length
       var bpm = (1 / (average / 1000)) * 60
-      tapTempo.emit('tempo', bpm)
+      $(document).trigger('tempoSetByTapping', bpm);
     }
   }
 
   var timer = null
-  function beginTimeout(){
+  var beginTimeout = function(){
     clearTimeout(timer)
     timer = setTimeout(function(){
       times = [lastDifference]
@@ -45,15 +40,20 @@ module.exports = function(){
     }, timeout)
   }
 
-  return tapTempo
+  return {
+    tap: tap;  
+  }
 }
 
 /* End of external script */
 
+console.log(module.exports);
+
 $(document).on('click', '[action-tap-tempo]', function() {
-  tapTempo.tap();
+  TapTempo.tap();
 });
 
-tapTempo.on('tempo', function(tempo){
-  ReactiveLocalStorage.setParam('tempo', tempo);
+$(document).on('tempoSetByTapping', function(event, bpm) {
+  console.log(bpm);
+  ReactiveLocalStorage.setParam('tempo', bpm);
 });

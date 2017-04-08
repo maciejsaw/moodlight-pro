@@ -14,13 +14,9 @@ $(document).on('keydown', function(e){
     	toggleStartOrStop();
     } else if (e.keyCode === keyNameToCode["B"]) {
         $('[action-checkbox="blendingColors"]').trigger('click');
-    } else if (e.keyCode === keyNameToCode["Q"]) {
-        $('[action-tempo-divide-4]').trigger('click');
-    } else if (e.keyCode === keyNameToCode["W"]) {
+    } else if (e.keyCode === keyNameToCode[","]) {
         $('[action-tempo-divide-2]').trigger('click');
-    } else if (e.keyCode === keyNameToCode["E"]) {
+    } else if (e.keyCode === keyNameToCode["."]) {
         $('[action-tempo-multiply-2]').trigger('click');
-    } else if (e.keyCode === keyNameToCode["R"]) {
-        $('[action-tempo-multiply-4]').trigger('click');
     }
 });

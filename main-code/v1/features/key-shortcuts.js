@@ -10,14 +10,20 @@ function toggleStartOrStop() {
 }
 
 $(document).on('keydown', function(e){
-    if (e.keyCode === keyNameToCode["Space"]) { 
-    	toggleStartOrStop();
-    	enterFullscreenMode();
-    } else if (e.keyCode === keyNameToCode["B"]) {
-        $('[action-checkbox="blendingColors"]').trigger('click');
-    } else if (e.keyCode === keyNameToCode[","]) {
-        $('[action-tempo-divide-2]').trigger('click');
-    } else if (e.keyCode === keyNameToCode["."]) {
-        $('[action-tempo-multiply-2]').trigger('click');
-    }
+	var checkIfTextInputIsInFocus = function() {
+		return $('input').is(":focus") || $('textarea').is(":focus"); 
+	};
+
+	if( !checkIfTextInputIsInFocus() ) {
+		if (e.keyCode === keyNameToCode["Space"]) { 
+			toggleStartOrStop();
+			enterFullscreenMode();
+		} else if (e.keyCode === keyNameToCode["B"]) {
+		    $('[action-checkbox="blendingColors"]').trigger('click');
+		} else if (e.keyCode === keyNameToCode[","]) {
+		    $('[action-tempo-divide-2]').trigger('click');
+		} else if (e.keyCode === keyNameToCode["."]) {
+		    $('[action-tempo-multiply-2]').trigger('click');
+		}
+	}
 });

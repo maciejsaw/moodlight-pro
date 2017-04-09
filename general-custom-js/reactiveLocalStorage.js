@@ -201,6 +201,7 @@ var ReactiveLocalStorage = (function() {
 		appendToArray: appendToArray,
 		removeElementFromArrayXWithIdY: removeElementFromArrayXWithIdY,
 		findInArrayXObjectWithIdY: findInArrayXObjectWithIdY,
+		findInArrayXObjectWithPropertyYMatchingZ: findInArrayXObjectWithPropertyYMatchingZ
 	}
 
 })();

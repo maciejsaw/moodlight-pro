@@ -7,6 +7,7 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'black',
 		color__3: 'null',
 		color__4: 'null',
+		blendingColors: 'false'
 	}
 ]);
 
@@ -22,4 +23,16 @@ $(document).on('click', '[action-play-preset]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
 });
+
+function playPresetById(presetId) {
+	var presetData = ReactiveLocalStorage.findInArrayXObjectWithIdY('listOfPresets', presetId);
+	ReactiveLocalStorage.setParam('col')
+
+	//for each value in preset different than id, set the global state for their value
+	$.each(presetData, function(key, value) {
+		if (key !== 'id') {
+			ReactiveLocalStorage.setParam(key, value);
+		}
+	});
+}
 

@@ -26,7 +26,7 @@ ReactiveLocalStorageDataBindArrayList('listOfPresets', function($elementToAppend
 	//so you can modify each of then depending on state,
 
 	console.log(elementData);
-	$elementToAppend.find('[js-selector="preset-name"]').val(elementData.name);
+	$elementToAppend.find('[action-set-preset-name]').val(elementData.name);
 });
 
 $(document).on('click', '[action-play-preset]', function() {
@@ -35,6 +35,12 @@ $(document).on('click', '[action-play-preset]', function() {
 });
 
 $(document).on('click', '[action-remove-preset]', function() {
+	var presetId = $(this).closest('[id]').attr('id');
+	console.log(presetId);
+	removePresetById(presetId);
+});
+
+$(document).on('input', '[action-set-preset-name]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
 	removePresetById(presetId);
@@ -75,5 +81,13 @@ function savePreset() {
 	};
 
 	ReactiveLocalStorage.appendToBeginningOfTheArray('listOfPresets', currentStateToSave);
+}
+
+function updatePresetName(presetId, newName) {
+	ReactiveLocalStorage.updateObjectInArray('listOfPresets', {
+		findObjectWithId: presetId,
+		propertyToUpdate: 'name',
+		newValue: newName
+	});
 }
 

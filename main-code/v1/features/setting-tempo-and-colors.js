@@ -98,15 +98,15 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 });
 
 function multiplyTempo(factor) {
-	var currentTempo = ReactiveLocalStorage.getParam('tempo');
-	var updatedTempo = currentTempo*factor;
-	ReactiveLocalStorage.setParam('tempo', updatedTempo);
+	var currentFactor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
+	var updatedFactor = currentFactor*factor;
+	ReactiveLocalStorage.setParam('tempoMultiplyFactor', updatedFactor);
 }
 
 function divideTempo(factor) {
-	var currentTempo = ReactiveLocalStorage.getParam('tempo');
-	var updatedTempo = currentTempo/factor;
-	ReactiveLocalStorage.setParam('tempo', updatedTempo);
+	var currentFactor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
+	var updatedFactor = currentFactor/factor;
+	ReactiveLocalStorage.setParam('tempoMultiplyFactor', updatedFactor);
 }
 
 $(document).on('click', '[action-tempo-multiply-2]', function() {

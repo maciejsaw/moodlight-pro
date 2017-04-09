@@ -24,7 +24,7 @@ $(document).on('keydown', function(e){
 		    $('[action-tempo-divide-2]').trigger('click');
 		} else if (e.keyCode === keyNameToCode["."]) {
 		    $('[action-tempo-multiply-2]').trigger('click');
-		} else if (e,keyCode === keyNameToCode["T"]) {
+		} else if (e.keyCode === keyNameToCode["T"]) {
 			$('[action-tap-tempo]').trigger('mousedown');
 		}
 	}

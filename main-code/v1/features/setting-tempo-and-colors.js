@@ -7,6 +7,13 @@ ReactiveLocalStorage.setDefaultParam('color__3', 'null');
 ReactiveLocalStorage.setDefaultParam('color__4', 'null');
 ReactiveLocalStorage.setDefaultParam('tempoMultiplyFactor', '1');
 
+function getTempoIntervalInMilliseconds() {
+	var tempo = ReactiveLocalStorage.getParam('tempo');
+	var tempoMultiplyFactor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
+	var tempoInMilliseconds = (60000/tempo)*tempoMultiplyFactor;
+	return tempoInMilliseconds;
+}
+
 //we have a defined number of colors slots, each stored in separate state
 var colorIndexesInReactiveLocalStorage = [
 	1,
@@ -33,10 +40,7 @@ function getColors() {
 
 function startChangingColors() {
 
-	var tempo = ReactiveLocalStorage.getParam('tempo');
-	var tempoMultiplyFactor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
-	var tempoInMilliseconds = (60000/tempo)*tempoMultiplyFactor;
-
+	var tempoIntervalInMilliseconds = getTempoIntervalInMilliseconds();
 	var colorsOrder = getColors();	
 	var colorIndex = 0; 
 
@@ -54,7 +58,7 @@ function startChangingColors() {
 	clearInterval(globalTempoInterval);
 	globalTempoInterval = setInterval(function() {
 		changeToNextColor()
-	}, tempoInMilliseconds)
+	}, tempoIntervalInMilliseconds )
 
 }
 

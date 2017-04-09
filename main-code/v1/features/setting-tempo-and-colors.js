@@ -73,6 +73,12 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 	}
 });
 
+ReactiveLocalStorage.onParamChange('tempoMultiplyFactor', function(value) {
+	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+		startChangingColors();
+	}
+});
+
 function onColorChangeWhenStarted(callbackFunction) {
 	$.each(colorIndexesInReactiveLocalStorage, function(arrayIndex, arrayValue) {
 		ReactiveLocalStorage.onParamChange('color__'+arrayValue+'', function(value) {

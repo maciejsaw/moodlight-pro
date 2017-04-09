@@ -88,7 +88,7 @@ function updatePresetName(presetId, newName) {
 	ReactiveLocalStorage.updateObjectInArray('listOfPresets', {
 		findObjectWithId: presetId,
 		propertyToUpdate: 'name',
-		newValue: newName
+		newValue: newName,
 	});
 }
 

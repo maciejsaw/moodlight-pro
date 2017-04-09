@@ -13,6 +13,7 @@ $(document).on('click', '[action-play-preset]', function() {
 
 ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 	{
+		id: 'default1',
 		name: "Strobe",
 		multiplyFactor: 1,
 		color__1: 'white',

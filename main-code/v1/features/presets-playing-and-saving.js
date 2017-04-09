@@ -49,7 +49,7 @@ $(document).on('blur', '[action-set-preset-name]', function() {
 
 $(document).on('click', '[action-save-preset]', function() {
 	savePreset();
-	$('[action-set-preset-name]').first().focus();
+	$('[data-bind-repeatable-clone] [action-set-preset-name]').focus();
 });
 
 function playPresetById(presetId) {

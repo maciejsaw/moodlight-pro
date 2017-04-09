@@ -115,7 +115,7 @@ var ReactiveLocalStorage = (function() {
 			}
 		});
 
-		console.log(updatedArray);
+		console.log(array);
 
 		ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
 	}

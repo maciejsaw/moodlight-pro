@@ -19,6 +19,9 @@ ReactiveLocalStorageDataBindArrayList('transactionsInProgressList', function($el
 	}
 });
 
+
+!!!!TODO: prevent the whole list from rerendering when something changes, because this blocks input field!
+//Current workaround: focus the input field after each rerender
 */
 
 

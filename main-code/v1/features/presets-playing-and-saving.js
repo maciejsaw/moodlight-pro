@@ -49,7 +49,6 @@ $(document).on('blur', '[action-set-preset-name]', function() {
 
 $(document).on('click', '[action-save-preset]', function() {
 	savePreset();
-	$('[data-bind-repeatable-clone] [action-set-preset-name]').focus();
 });
 
 function playPresetById(presetId) {
@@ -83,6 +82,8 @@ function savePreset() {
 	};
 
 	ReactiveLocalStorage.appendToBeginningOfTheArray('listOfPresets', currentStateToSave);
+
+	$('[data-bind-repeatable-clone] [action-set-preset-name]').focus();
 }
 
 function updatePresetName(presetId, newName) {

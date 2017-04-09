@@ -122,7 +122,6 @@ var ReactiveLocalStorage = (function() {
 	function findInArrayXObjectWithIdY(paramNameWithArray, propertyValueThatShouldMatch) {
 		findInArrayXObjectWithPropertyYMatchingZ(paramNameWithArray, 'id', propertyValueThatShouldMatch);
 	}
-	//
 
 	function removeParam(key, options) {
 		options = options || {};

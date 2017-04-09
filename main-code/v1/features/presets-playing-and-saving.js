@@ -10,3 +10,14 @@ $(document).on('click', '[action-play-preset]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log('presetId');
 });
+
+ReactiveLocalStorage.setDefaultParam('listOfPresets', [
+	{
+		name: "Strobe",
+		multiplyFactor: 1,
+		color__1: 'white',
+		color__2: 'black',
+		color__3: 'null',
+		color__4: 'null',
+	}
+]);

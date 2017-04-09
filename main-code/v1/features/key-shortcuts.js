@@ -20,9 +20,9 @@ $(document).on('keydown', function(e){
 			enterFullscreenMode();
 		} else if (e.keyCode === keyNameToCode["B"]) {
 		    $('[action-checkbox="blendingColors"]').trigger('click');
-		} else if (e.keyCode === keyNameToCode[","]) {
+		} else if (e.keyCode === keyNameToCode["Left"]) {
 		    $('[action-tempo-divide-2]').trigger('click');
-		} else if (e.keyCode === keyNameToCode["."]) {
+		} else if (e.keyCode === keyNameToCode["Right"]) {
 		    $('[action-tempo-multiply-2]').trigger('click');
 		} else if (e.keyCode === keyNameToCode["T"]) {
 			$('[action-tap-tempo]').trigger('mousedown');

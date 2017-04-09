@@ -78,7 +78,7 @@ function savePreset() {
 		color__2: ReactiveLocalStorage.getParam('color__2'),
 		color__3: ReactiveLocalStorage.getParam('color__3'),
 		color__4: ReactiveLocalStorage.getParam('color__4'),
-		blendingColors: ReactiveLocalStorage.getParam('lendingColors'),
+		blendingColors: ReactiveLocalStorage.getParam('blendingColors'),
 	};
 
 	ReactiveLocalStorage.appendToBeginningOfTheArray('listOfPresets', currentStateToSave);

@@ -104,10 +104,6 @@ var ReactiveLocalStorage = (function() {
 	function findInArrayXObjectWithPropertyYMatchingZ(paramNameWithArray, objectPropertyToSearchIn, propertyValueThatShouldMatch) {
 		var array = getParam(paramNameWithArray);
 
-		console.log(array);
-		console.log(typeof array);
-		console.log($.isArray(array));
-
 		if ($.isArray(array)) {
 			var arrayData = $.grep(array, function(elementOfArray, indexInArray){ // just use arr
 				return elementOfArray[objectPropertyToSearchIn] === propertyValueThatShouldMatch;

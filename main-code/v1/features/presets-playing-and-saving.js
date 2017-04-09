@@ -34,5 +34,7 @@ function playPresetById(presetId) {
 			ReactiveLocalStorage.setParam(key, value);
 		}
 	});
+
+	ReactiveLocalStorage.setParam('startedOrStopped', 'started');
 }
 

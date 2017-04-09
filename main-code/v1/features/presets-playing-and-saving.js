@@ -8,6 +8,16 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__3: 'null',
 		color__4: 'null',
 		blendingColors: 'false'
+	},
+	{
+		id: 'default2',
+		name: "Emergency",
+		tempoMultiplyFactor: 1,
+		color__1: 'red',
+		color__2: 'blue',
+		color__3: 'null',
+		color__4: 'null',
+		blendingColors: 'true'
 	}
 ]);
 

@@ -40,7 +40,7 @@ $(document).on('click', '[action-remove-preset]', function() {
 	removePresetById(presetId);
 });
 
-$(document).on('input', '[action-set-preset-name]', function() {
+$(document).on('blur', '[action-set-preset-name]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
 	var newName = $(this).val();

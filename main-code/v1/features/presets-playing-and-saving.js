@@ -44,7 +44,7 @@ $(document).on('input', '[action-set-preset-name]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
 	var newName = $(this).val();
-	updatePresetName(newName);
+	updatePresetName(presetId, newName);
 });
 
 $(document).on('click', '[action-save-preset]', function() {

@@ -10,7 +10,7 @@ ReactiveLocalStorage.setDefaultParam('tempoMultiplyFactor', '1');
 function getTempoIntervalInMilliseconds() {
 	var tempo = ReactiveLocalStorage.getParam('tempo');
 	var tempoMultiplyFactor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
-	var tempoInMilliseconds = (60000/tempo)*tempoMultiplyFactor;
+	var tempoInMilliseconds = (60000/tempo)/tempoMultiplyFactor;
 	return tempoInMilliseconds;
 }
 

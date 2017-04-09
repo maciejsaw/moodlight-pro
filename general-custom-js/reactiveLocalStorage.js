@@ -105,6 +105,7 @@ var ReactiveLocalStorage = (function() {
 		var array = getParam(paramNameWithArray);
 
 		console.log(array);
+		console.log(typeof array);
 
 		if (typeof array === 'array') {
 			var arrayData = $.grep(array, function(elementOfArray, indexInArray){ // just use arr

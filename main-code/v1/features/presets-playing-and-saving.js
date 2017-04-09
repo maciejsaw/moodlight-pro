@@ -31,8 +31,13 @@ ReactiveLocalStorageDataBindArrayList('listOfPresets', function($elementToAppend
 
 $(document).on('click', '[action-play-preset]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
-	console.log(presetId);
 	playPresetById(presetId);
+});
+
+$(document).on('click', '[action-remove-preset]', function() {
+	var presetId = $(this).closest('[id]').attr('id');
+	console.log(presetId);
+	removePresetById(presetId);
 });
 
 function playPresetById(presetId) {
@@ -47,5 +52,9 @@ function playPresetById(presetId) {
 	});
 
 	ReactiveLocalStorage.setParam('startedOrStopped', 'started');
+}
+
+function removePresetById(presetId) {
+	ReactiveLocalStorage.removeElementFromArrayXWithIdY('listOfPresets', presetId);
 }
 

@@ -77,6 +77,8 @@ ReactiveLocalStorage.onParamChange('tempoMultiplyFactor', function(value) {
 	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
 		startChangingColors();
 	}
+
+	$('[data-bind="tempo-multiply-factor"]').text(tempoMultiplyFactor);
 });
 
 function onColorChangeWhenStarted(callbackFunction) {

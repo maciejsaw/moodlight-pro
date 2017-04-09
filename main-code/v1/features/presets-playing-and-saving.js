@@ -83,7 +83,7 @@ function savePreset() {
 
 	ReactiveLocalStorage.appendToBeginningOfTheArray('listOfPresets', currentStateToSave);
 
-	$('[data-bind-repeatable-clone] [action-set-preset-name]').focus();
+	$('[data-bind-repeatable-clone][id="'+currentStateToSave.id+'"] [action-set-preset-name]').focus();
 }
 
 function updatePresetName(presetId, newName) {

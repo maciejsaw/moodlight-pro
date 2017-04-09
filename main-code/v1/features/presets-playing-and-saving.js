@@ -37,7 +37,6 @@ $(document).on('click', '[action-play-preset]', function() {
 
 function playPresetById(presetId) {
 	var presetData = ReactiveLocalStorage.findInArrayXObjectWithIdY('listOfPresets', presetId);
-	ReactiveLocalStorage.setParam('col')
 
 	//for each value in preset different than id, set the global state for their value
 	$.each(presetData, function(key, value) {

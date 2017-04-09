@@ -43,7 +43,7 @@ $(document).on('click', '[action-remove-preset]', function() {
 $(document).on('input', '[action-set-preset-name]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
-	var newName = $(this).value();
+	var newName = $(this).val();
 	updatePresetName(newName);
 });
 

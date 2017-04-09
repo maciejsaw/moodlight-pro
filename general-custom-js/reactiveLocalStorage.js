@@ -94,7 +94,7 @@ var ReactiveLocalStorage = (function() {
 	function removeElementFromArrayXWithIdY(paramNameThatContainsArray, idThatShouldBeRemoved) {
 		var array = getParam(paramNameThatContainsArray);
 
-		array = $.grep(array, function(elementOfArray, indexInArray){ // just use arr
+		array = $.grep(array, function(elementOfArray, indexInArray){
 			return elementOfArray.id != idThatShouldBeRemoved;
 		});
 

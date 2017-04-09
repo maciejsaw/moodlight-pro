@@ -22,6 +22,7 @@ ReactiveLocalStorageDataBindArrayList('listOfPresets', function($elementToAppend
 $(document).on('click', '[action-play-preset]', function() {
 	var presetId = $(this).closest('[id]').attr('id');
 	console.log(presetId);
+	playPresetById(presetId);
 });
 
 function playPresetById(presetId) {

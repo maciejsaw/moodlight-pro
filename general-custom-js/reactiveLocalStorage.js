@@ -115,6 +115,8 @@ var ReactiveLocalStorage = (function() {
 			return elementOfArray['id'] === idToLookFor;
 		});
 
+		console.log(filteredData);
+
 		//
 
 		//ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
@@ -223,6 +225,7 @@ var ReactiveLocalStorage = (function() {
 		removeElementFromArrayXWithIdY: removeElementFromArrayXWithIdY,
 		findInArrayXObjectWithIdY: findInArrayXObjectWithIdY,
 		findInArrayXObjectWithPropertyYMatchingZ: findInArrayXObjectWithPropertyYMatchingZ,
+		updateObjectInArray: updateObjectInArray,
 	}
 
 })();

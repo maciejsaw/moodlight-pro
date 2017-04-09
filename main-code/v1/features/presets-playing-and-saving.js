@@ -2,7 +2,7 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 	{
 		id: 'default1',
 		name: "Strobe",
-		multiplyFactor: 1,
+		tempoMultiplyFactor: 1,
 		color__1: 'white',
 		color__2: 'black',
 		color__3: 'null',

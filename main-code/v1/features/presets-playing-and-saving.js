@@ -40,6 +40,10 @@ $(document).on('click', '[action-remove-preset]', function() {
 	removePresetById(presetId);
 });
 
+$(document).on('click', '[action-save-preset]', function() {
+	savePreset();
+});
+
 function playPresetById(presetId) {
 	var presetData = ReactiveLocalStorage.findInArrayXObjectWithIdY('listOfPresets', presetId);
 

@@ -106,8 +106,9 @@ var ReactiveLocalStorage = (function() {
 
 		console.log(array);
 		console.log(typeof array);
+		console.log(array.isArray());
 
-		if (typeof array === 'array') {
+		if (array.isArray()) {
 			var arrayData = $.grep(array, function(elementOfArray, indexInArray){ // just use arr
 				return elementOfArray[objectPropertyToSearchIn] === propertyValueThatShouldMatch;
 			});

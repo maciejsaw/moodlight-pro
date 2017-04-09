@@ -109,20 +109,16 @@ var ReactiveLocalStorage = (function() {
 		var propertyToUpdate = options.propertyToUpdate;
 		var newValue = options.newValue;
 
-		var filteredData = $.grep(array, function(elementOfArray, indexInArray){
-			console.log(elementOfArray);
-			console.log(indexInArray);
-			return elementOfArray['id'] === idToLookFor;
+		var updatedArray = $.grep(array, function(elementOfArray, indexInArray){
+			if (elementOfArray['id'] === idToLookFor) {
+				elementOfArray['name'] = newValue;
+			}
 		});
 
-		console.log(filteredData);
+		console.log(updatedArray);
 
-		//
-
-		//ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
+		ReactiveLocalStorage.setParam(paramNameThatContainsArray, updatedArray);
 	}
-
-
 
 	function findInArrayXObjectWithPropertyYMatchingZ(paramNameWithArray, objectPropertyToSearchIn, propertyValueThatShouldMatch) {
 		var array = getParam(paramNameWithArray);

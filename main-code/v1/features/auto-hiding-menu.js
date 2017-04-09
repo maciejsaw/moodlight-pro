@@ -59,3 +59,12 @@ $(document).on('touchstart', '.main-visualisations', function() {
     event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
 
+//prevent hiding when clicking in the menu
+$(document).on('click', '.left-menu', function() {
+    clearTimeout(mouseMovementHideTimer);
+    clearTimeout(mouseMovementShowTimer);
+
+    event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
+});
+
+

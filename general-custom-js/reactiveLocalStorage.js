@@ -33,6 +33,7 @@ var ReactiveLocalStorage = (function() {
 	function setParam(key, value, options) {
 		options = options || {};
 		console.log(value);
+		console.log(key);
 		console.log(paramsObject[key]);
 
 
@@ -110,7 +111,7 @@ var ReactiveLocalStorage = (function() {
 
 	function findInArrayXObjectWithPropertyYMatchingZ(paramNameThatContainsArray, objectPropertyToSearchIn, propertyValueThatShouldMatch) {
 		var array = getParam(paramNameThatContainsArray);
-		
+
 		if ($.isArray(array)) {
 			var filteredData = $.grep(array, function(elementOfArray, indexInArray){
 				return elementOfArray[objectPropertyToSearchIn] === propertyValueThatShouldMatch;

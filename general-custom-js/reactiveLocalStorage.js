@@ -189,6 +189,10 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	return {
+		varsion: {
+			version: 2,
+			versionNotes: 'In v2 removed the mini-meteor dependecy and built only with jQuery'
+		},
 		setParam: setParam,
 		getAllParams: getAllParams,
 		setFreshParams: setFreshParams,

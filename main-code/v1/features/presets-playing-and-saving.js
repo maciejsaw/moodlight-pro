@@ -75,7 +75,7 @@ function getNewPresetName() {
 	var factor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
 	var blend = ReactiveLocalStorage.getParam('blendingColors');
 
-	if (blend = 'true') {
+	if (blend === 'true') {
 		blend = 'blend'
 	}
 

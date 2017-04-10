@@ -54,7 +54,7 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	function appendToBeginningOfTheArray(paramNameThatContainsArray, objectToAppend) {
-		var array = paramsObject[paramNameThatContainsArray];
+		var array = getParam('paramNameThatContainsArray');
 
 		if (typeof array === 'undefined') {
 			array = [];
@@ -68,7 +68,7 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	function appendToArray(paramNameThatContainsArray, objectToAppend) {
-		var array = paramsObject[paramNameThatContainsArray];
+		var array = getParam('paramNameThatContainsArray');
 
 		if (typeof array === 'undefined') {
 			array = [];
@@ -80,7 +80,7 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	function removeElementFromArrayXWithIdY(paramNameThatContainsArray, idThatShouldBeRemoved) {
-		var array = paramsObject[paramNameThatContainsArray];
+		var array = getParam('paramNameThatContainsArray');
 
 		array = $.grep(array, function(elementOfArray, indexInArray){
 			return elementOfArray.id != idThatShouldBeRemoved;
@@ -90,7 +90,7 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	function updateObjectInArray(paramNameThatContainsArray, options) {
-		var array = paramsObject[paramNameThatContainsArray];
+		var array = getParam('paramNameThatContainsArray');
 
 		//this is to show the schema of options here in code
 		var idToLookFor = options.findObjectWithId;
@@ -109,7 +109,7 @@ var ReactiveLocalStorage = (function() {
 	}
 
 	function findInArrayXObjectWithPropertyYMatchingZ(paramNameThatContainsArray, objectPropertyToSearchIn, propertyValueThatShouldMatch) {
-		var array = paramsObject[paramNameThatContainsArray];
+		var array = getParam('paramNameThatContainsArray');
 
 		if ($.isArray(array)) {
 			var filteredData = $.grep(array, function(elementOfArray, indexInArray){

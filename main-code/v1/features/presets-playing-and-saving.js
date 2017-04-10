@@ -73,9 +73,15 @@ function getNewPresetName() {
 	var color1 = ReactiveLocalStorage.getParam('color__1');
 	var color2 = ReactiveLocalStorage.getParam('color__2');
 	var factor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
-	var resultName = nameToSet.color1+" "+nameToSet.color2+" @x"+nameToSet.factor;
+	var blend = ReactiveLocalStorage.getParam('blendingColors');
 
-	return resultName
+	if (blend = 'true') {
+		blend = 'blend'
+	}
+
+	var resultName = color1+" "+color2+" "+blend+" @x"+factor;
+
+	return resultName;
 }
 
 function savePreset() {

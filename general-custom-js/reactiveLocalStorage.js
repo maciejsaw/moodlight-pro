@@ -5,7 +5,7 @@ var ReactiveLocalStorage = (function() {
 	var previousStringParams = {}; //this will be used to compare changes in params
 
 	//at the beginning, check if params are stored in local storage and proccess them, so that they become reactive
-	if (typeof localStorage.getItem('paramsString') == 'undefined') {
+	if (typeof localStorage.getItem('paramsString') == 'undefined' || localStorage.getItem('paramsString') == null) {
 		paramsObject = {};
 		saveParamObjectToLocalStorageAsString();
 	} else {

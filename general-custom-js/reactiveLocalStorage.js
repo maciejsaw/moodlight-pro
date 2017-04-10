@@ -53,13 +53,13 @@ var ReactiveLocalStorage = (function() {
 	function appendToBeginningOfTheArray(paramNameThatContainsArray, objectToAppend) {
 		var array = getParam(paramNameThatContainsArray);
 
-		console.log(array);
-
 		if (typeof array === 'undefined') {
 			array = [];
 		}
 
 		array.unshift(objectToAppend);
+
+		console.log(array);
 
 		setParam(paramNameThatContainsArray, array);
 	}

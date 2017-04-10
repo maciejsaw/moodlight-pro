@@ -7,7 +7,7 @@ var scriptsToLoad = [
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery-deparam.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery.scrollTo.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/query-string-router.js",
-	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/reactiveLocalStorage.js",
+	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/reactiveLocalStorage__new-without-meteor.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/WebflowCustomCode.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/transitions-functions-wrapper.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/supersimple-extensible-function.js",

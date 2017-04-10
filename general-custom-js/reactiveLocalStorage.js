@@ -151,6 +151,7 @@ var ReactiveLocalStorage = (function() {
 	function onParamChange(key, actionFunction) {
 		$(document).on('reactiveLocalStorage__'+key+'__paramChanged', function(event, value) {
 			actionFunction(value);
+			console.log(key+" on param change");
 		});
 
 		//store the action on param in a separate array, so that we can retrigger this route manually

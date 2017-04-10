@@ -69,16 +69,21 @@ function removePresetById(presetId) {
 	ReactiveLocalStorage.removeElementFromArrayXWithIdY('listOfPresets', presetId);
 }
 
+function getNewPresetName() {
+	var color1 = ReactiveLocalStorage.getParam('color__1');
+	var color2 = ReactiveLocalStorage.getParam('color__2');
+	var factor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
+	var resultName = nameToSet.color1+" "+nameToSet.color2+" @x"+nameToSet.factor;
+
+	return resultName
+}
+
 function savePreset() {
-	var nameToSet = {};
-	nameToSet.color1 = ReactiveLocalStorage.getParam('color__1');
-	nameToSet.color2 = ReactiveLocalStorage.getParam('color__2');
-	nameToSet.factor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');
-	nameToSet.resultName = nameToSet.color1+" "+nameToSet.color2+" @x"+nameToSet.factor;
+
 
 	var currentStateToSave = {
 		id: newUniqueId(),
-		name: nameToSet.resultName,
+		name: getNewPresetName(),
 		tempoMultiplyFactor: ReactiveLocalStorage.getParam('tempoMultiplyFactor'),
 		color__1: ReactiveLocalStorage.getParam('color__1'),
 		color__2: ReactiveLocalStorage.getParam('color__2'),

@@ -3,13 +3,17 @@ ReactiveLocalStorage.setDefaultParam('fullscreen', 'false');
 function enterFullscreenMode() {
     $(".left-menu").addClass('is-hidden'); 
     $('.body-wrapper').addClass('is-fullscreen');
-    ReactiveLocalStorage.setParam('fullscreen', 'true');
+    if (ReactiveLocalStorage.getParam('fullscreen') !== 'true') {
+        ReactiveLocalStorage.setParam('fullscreen', 'true');
+    }
 }
 
 function exitFullscreenMode() {
     $('.left-menu').removeClass('is-hidden'); 
     $('.body-wrapper').removeClass('is-fullscreen');
-    ReactiveLocalStorage.setParam('fullscreen', 'false');
+    if (ReactiveLocalStorage.getParam('fullscreen') !== 'false') {
+        ReactiveLocalStorage.setParam('fullscreen', 'false');
+    }
 }
 
 var mouseMovementHideTimer;

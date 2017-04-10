@@ -81,7 +81,7 @@ function savePreset() {
 		blendingColors: ReactiveLocalStorage.getParam('blendingColors'),
 	};
 
-	ReactiveLocalStorage.appendToBeginningOfTheArray('listOfPresets', currentStateToSave);
+	ReactiveLocalStorage.appendToArray('listOfPresets', currentStateToSave);
 
 	//TODO: fix RACE CONDITION!
 	setTimeout(function() {

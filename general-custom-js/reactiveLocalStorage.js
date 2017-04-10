@@ -65,10 +65,7 @@ var ReactiveLocalStorage = (function() {
 		var paramsObject = deparam(paramsString);
 
 		if (typeof paramsObject[key] == 'undefined') {
-			paramsObject[key] = value;
-
-			paramsString = $.param(paramsObject);
-			processStringParams();  
+			setParam(key, value); 
 		}
 	}
 
@@ -151,20 +148,27 @@ var ReactiveLocalStorage = (function() {
 		options = options || {};
 
 		var paramsObject = deparam(paramsString);
-		delete paramsObject[key];
 
-		paramsString = $.param(paramsObject);
-		processStringParams();
+		if (typeof paramsObject[key] !== 'undefined') {
+			delete paramsObject[key];
+			paramsString = $.param(paramsObject);
+			$(document).trigger('reactiveLocalStorage__'+key+'__paramChanged', value); 
+		}
 	}
 
 	function setFreshParams(newParamsObj) {
 		paramsString = $.param(newParamsObj);
-		processStringParams();
+		retriggerOnParamChangeForAll();
 	}
 
 	function getParam(key) {
 		var paramsObject = deparam(paramsString);
 		return paramsObject[key];
+	}
+
+	function getAllParams() {
+		var paramsObject = deparam(paramsString);
+		return paramsObject;
 	}
 
 	var actionsOnParamChange = {};
@@ -210,7 +214,7 @@ var ReactiveLocalStorage = (function() {
 
 	return {
 		setParam: setParam,
-		getAllParams: processStringParams,
+		getAllParams: getAllParams,
 		setFreshParams: setFreshParams,
 		setDefaultParam: setDefaultParam,
 		getParam: getParam,

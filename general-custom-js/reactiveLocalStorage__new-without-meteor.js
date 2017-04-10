@@ -176,7 +176,6 @@ var ReactiveLocalStorage = (function() {
 	function retriggerOnParamChange(key) {
 		var paramsObject = deparam(paramsString);
 		var param = paramsObject[key];
-		console.log(param);
 		var arrayOfFunctionsAssociatedWithThisParam = actionsOnParamChange[key];
 		$.each(arrayOfFunctionsAssociatedWithThisParam, function(index, value) {
 			value(param);

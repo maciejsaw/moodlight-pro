@@ -88,11 +88,6 @@ function savePreset() {
 	};
 
 	ReactiveLocalStorage.appendToArray('listOfPresets', currentStateToSave);
-
-	//TODO: fix RACE CONDITION!
-	setTimeout(function() {
-		$('[data-bind-repeatable-clone][id="'+currentStateToSave.id+'"] [action-set-preset-name]').focus();
-	}, 500);
 }
 
 function updatePresetName(presetId, newName) {

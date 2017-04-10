@@ -80,7 +80,6 @@ function getNewPresetName() {
 
 function savePreset() {
 
-
 	var currentStateToSave = {
 		id: newUniqueId(),
 		name: getNewPresetName(),

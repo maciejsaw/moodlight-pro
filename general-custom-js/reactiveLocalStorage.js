@@ -149,6 +149,9 @@ var ReactiveLocalStorage = (function() {
 			actionsOnParamChange[key] = [];
 		}
 		actionsOnParamChange[key].push(actionFunction);
+
+		//when the onParamChanged is defined, also retrigger the state
+		retriggerOnParamChange(key);
 	}
 
 	function retriggerOnParamChange(key) {

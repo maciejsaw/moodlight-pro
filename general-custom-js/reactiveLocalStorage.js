@@ -44,6 +44,8 @@ var ReactiveLocalStorage = (function() {
 		if (typeof paramsObject[key] == 'undefined') {
 			setParam(key, value); 
 		}
+
+		console.log('params set to default'+key+" "+value);
 	}
 
 	function appendToBeginningOfTheArray(paramNameThatContainsArray, objectToAppend) {

@@ -11,7 +11,6 @@ var ReactiveLocalStorage = (function() {
 		paramsString = localStorage.getItem('paramsString');
 		paramsObject = $.deparam('paramsString');
 	}
-	retriggerOnParamChangeForAll();
 
 	//each time this function is fired, the onParamChange (Meteor.run) functions will run, but only
 	//the ones for which the value changed

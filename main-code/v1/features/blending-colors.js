@@ -19,3 +19,9 @@ ReactiveLocalStorage.onParamChange('tempo', function(value) {
 		ReactiveLocalStorage.retriggerOnParamChange('blendingColors');
 	}
 });
+
+ReactiveLocalStorage.onParamChange('tempoMultiplyFactor', function(value) {
+	if (ReactiveLocalStorage.getParam('startedOrStopped') === 'started') {
+		ReactiveLocalStorage.retriggerOnParamChange('blendingColors');
+	}
+});

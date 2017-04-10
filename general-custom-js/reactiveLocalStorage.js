@@ -30,6 +30,8 @@ var ReactiveLocalStorage = (function() {
 
 	function setParam(key, value, options) {
 		options = options || {};
+		console.log(value);
+
 
 		if (paramsObject[key] !== value) {
 			paramsObject[key] = value;

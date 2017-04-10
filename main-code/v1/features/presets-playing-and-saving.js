@@ -76,7 +76,9 @@ function getNewPresetName() {
 	var blend = ReactiveLocalStorage.getParam('blendingColors');
 
 	if (blend === 'true') {
-		blend = 'blend'
+		blend = 'blend';
+	} else {
+		blend = '';
 	}
 
 	var resultName = color1+" "+color2+" "+blend+" @x"+factor;

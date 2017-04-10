@@ -9,6 +9,7 @@ var ReactiveLocalStorage = (function() {
 		saveParamObjectToLocalStorageAsString();
 	} else {
 		paramsString = localStorage.getItem('paramsString');
+		paramsObject = $.deparam('paramsString');
 	}
 
 	//each time this function is fired, the onParamChange (Meteor.run) functions will run, but only

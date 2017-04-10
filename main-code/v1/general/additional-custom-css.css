@@ -116,7 +116,7 @@ textarea {
 }
 
 .bem-checkbox:hover .bem-checkbox__checkmark {
-  border-color: #72a33f;
+  border-color: #6badc2;
 }
 
 @-moz-keyframes spin {

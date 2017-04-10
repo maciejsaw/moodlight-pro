@@ -34,6 +34,7 @@ var ReactiveLocalStorage = (function() {
 		if (paramsObject[key] !== value) {
 			paramsObject[key] = value;
 			saveParamObjectToLocalStorageAsString();
+			console.log('reactiveLocalStorage__'+key+'__paramChanged__'+value+'');
 			$(document).trigger('reactiveLocalStorage__'+key+'__paramChanged', value); 
 		}
 		 

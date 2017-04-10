@@ -23,11 +23,11 @@ var ReactiveLocalStorage = (function() {
 	function getParam(key) {
 		//this return only values, not direct access to paramsObject
 		//that's why we deparam here
-		return $.deparam('paramsString')[key]; 
+		return $.deparam(paramsString)[key]; 
 	}
 
 	function getAllParams() {
-		return $.deparam('paramsString');
+		return $.deparam(paramsString);
 	}
 
 	function setParam(key, value, options) {

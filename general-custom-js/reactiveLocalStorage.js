@@ -50,10 +50,15 @@ var ReactiveLocalStorage = (function() {
 		options = options || {};
 
 		var paramsObject = deparam(paramsString);
-		paramsObject[key] = value;
 
+		if (paramsObject[key] !== value) {
+			paramsObject[key] = value;
+			paramsString = $.param(paramsObject);
+		}
+
+		paramsObject[key] = value;
 		paramsString = $.param(paramsObject);
-		processStringParams();    
+		$(document).trigger('reactiveLocalStorage__'+key+'__paramChanged', value);  
 	}
 
 	function setDefaultParam(key, value) {
@@ -76,7 +81,7 @@ var ReactiveLocalStorage = (function() {
 
 		array.unshift(objectToAppend);
 
-		ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
+		setParam(paramNameThatContainsArray, array);
 	}
 
 	function appendToArray(paramNameThatContainsArray, objectToAppend) {
@@ -88,7 +93,7 @@ var ReactiveLocalStorage = (function() {
 
 		array.push(objectToAppend);
 
-		ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
+		setParam(paramNameThatContainsArray, array);
 	}
 
 	function removeElementFromArrayXWithIdY(paramNameThatContainsArray, idThatShouldBeRemoved) {
@@ -98,7 +103,7 @@ var ReactiveLocalStorage = (function() {
 			return elementOfArray.id != idThatShouldBeRemoved;
 		});
 
-		ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
+		setParam(paramNameThatContainsArray, array);
 	}
 
 	function updateObjectInArray(paramNameThatContainsArray, options) {
@@ -117,7 +122,7 @@ var ReactiveLocalStorage = (function() {
 
 		console.log(array);
 
-		ReactiveLocalStorage.setParam(paramNameThatContainsArray, array);
+		setParam(paramNameThatContainsArray, array);
 	}
 
 	function findInArrayXObjectWithPropertyYMatchingZ(paramNameWithArray, objectPropertyToSearchIn, propertyValueThatShouldMatch) {
@@ -164,11 +169,8 @@ var ReactiveLocalStorage = (function() {
 
 	var actionsOnParamChange = {};
 	function onParamChange(key, actionFunction) {
-		//for each key in the reactive router params, define a reactive autorun 
-		//Each of the params will react to change independently, only if changed
-		Meteor.run(function() {
-			var param = reactiveParams.get(key); //note that this is a getter for reactive object, not the static string
-			actionFunction(param);
+		$(document).on('reactiveLocalStorage__'+key+'__paramChanged', function(event, value) {
+			actionFunction(value);
 		});
 
 		//store the action on param in a separate array, so that we can retrigger this route manually

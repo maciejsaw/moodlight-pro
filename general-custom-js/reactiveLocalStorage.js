@@ -150,7 +150,7 @@ var ReactiveLocalStorage = (function() {
 	var actionsOnParamChange = {};
 	function onParamChange(key, actionFunction) {
 		$(document).on('reactiveLocalStorage__'+key+'__paramChanged', function(event, value) {
-			console.log("action function "+value);
+			console.log("action function for "+value);
 			actionFunction(value);
 			console.log(key+" on param change");
 		});

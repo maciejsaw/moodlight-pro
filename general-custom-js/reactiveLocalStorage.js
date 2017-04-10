@@ -33,15 +33,9 @@ var ReactiveLocalStorage = (function() {
 
 		var paramsObject = deparam(paramsString);
 
-		console.log(value);
-		console.log(key);
-		console.log(paramsObject[key]);
-
-
 		if (paramsObject[key] !== value) {
 			paramsObject[key] = value;
 			saveParamObjectToLocalStorageAsString(paramsObject);
-			console.log('reactiveLocalStorage__'+key+'__paramChanged__'+value+'');
 			$(document).trigger('reactiveLocalStorage__'+key+'__paramChanged'); 
 		}
 
@@ -53,8 +47,6 @@ var ReactiveLocalStorage = (function() {
 		if (typeof paramsObject[key] == 'undefined') {
 			setParam(key, value); 
 		}
-
-		console.log('params set to default '+key+" "+value);
 	}
 
 	function appendToBeginningOfTheArray(paramNameThatContainsArray, objectToAppend) {
@@ -65,8 +57,6 @@ var ReactiveLocalStorage = (function() {
 		}
 
 		array.unshift(objectToAppend);
-
-		console.log(array);
 
 		setParam(paramNameThatContainsArray, array);
 	}
@@ -106,8 +96,6 @@ var ReactiveLocalStorage = (function() {
 				elementOfArray['name'] = newValue;
 			}
 		});
-
-		console.log(array);
 
 		setParam(paramNameThatContainsArray, array);
 	}
@@ -157,9 +145,7 @@ var ReactiveLocalStorage = (function() {
 		$(document).on('reactiveLocalStorage__'+key+'__paramChanged', function(event) {
 			var paramsObject = deparam(paramsString);
 			var value = paramsObject[key];
-			console.log("action function for "+key);
 			actionFunction(value);
-			console.log(key+" on param change");
 		});
 
 		//store the action on param in a separate array, so that we can retrigger this route manually

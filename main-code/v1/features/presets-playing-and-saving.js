@@ -70,7 +70,7 @@ function removePresetById(presetId) {
 }
 
 function savePreset() {
-	var nameToSet;
+	var nameToSet = {};
 	nameToSet.color1 = ReactiveLocalStorage.getParam('color__1');
 	nameToSet.color2 = ReactiveLocalStorage.getParam('color__2');
 	nameToSet.factor = ReactiveLocalStorage.getParam('tempoMultiplyFactor');

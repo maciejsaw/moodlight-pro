@@ -93,7 +93,7 @@ var ReactiveLocalStorage = (function() {
 
 		$.grep(array, function(elementOfArray, indexInArray){
 			if (elementOfArray['id'] === idToLookFor) {
-				elementOfArray['name'] = newValue;
+				elementOfArray[propertyToUpdate] = newValue;
 			}
 		});
 

@@ -5,7 +5,6 @@ var uglify = require('gulp-uglify');
 var git = require('gulp-git');
 
 var jsFiles = [
-	"./plugins-and-libraries/underscore-min.js",
 	"./plugins-and-libraries/uuid.js",
 	"./plugins-and-libraries/jquery.fullscreen.min.js",
 	"./plugins-and-libraries/jquery.transit.min.js",
@@ -13,6 +12,7 @@ var jsFiles = [
 	"./plugins-and-libraries/mini-meteor.min.js",
 	"./plugins-and-libraries/jquery-deparam.js",
 	"./plugins-and-libraries/jquery.scrollTo.min.js",
+	"./plugins-and-libraries/morphdom-umd.js",
 	"./general-custom-js/query-string-router.js",
 	"./general-custom-js/reactiveLocalStorage.js",
 	"./general-custom-js/WebflowCustomCode.js",

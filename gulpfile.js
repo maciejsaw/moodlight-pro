@@ -35,7 +35,7 @@ var jsFiles = [
 	"./main-code/v1/features/tapping-tempo.js",
 ]; 
 
-var jsDestination = 'dist';
+var jsDestination = '.';
 
 gulp.task('scripts', function() {  
     return gulp.src(jsFiles)

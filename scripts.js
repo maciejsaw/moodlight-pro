@@ -2031,9 +2031,20 @@ $(document).on('tempoSetByTapping', function(event, bpm) {
 });
 
 var colorsPaletteTable = [
-	'yellow',
 	'pink',
-	'aqua',
+	'DeepPink',
+	'PaleVioletRed',
+	'MediumVioletRed',
+	'LightCoral',
+	'Crimson',
+	'FireBrick'
+	'DarkRed'
+	'OrangeRed',
+	'Tomato',
+	'Coral',
+	'DarkOrange',
+	'Orange',
+	'yellow'
 ];
 
 function appendColorToDropdowns(colorName) {

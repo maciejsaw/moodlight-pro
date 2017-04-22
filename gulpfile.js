@@ -39,7 +39,7 @@ var jsDestination = 'dist';
 
 gulp.task('scripts', function() {  
     return gulp.src(jsFiles)
-        .pipe(concat('scripts.js'))
+        .pipe(concat('scripts.js'), {sourceRoot: ''})
         .pipe(gulp.dest(jsDestination));
         // .pipe(rename('scripts.min.js'))
         // .pipe(uglify())

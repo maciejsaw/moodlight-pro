@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat-sourcemap'); 
 var rename = require('gulp-rename'); 
 var uglify = require('gulp-uglify');
+var git = require('gulp-git');
 
 var jsFiles = [
 	"./plugins-and-libraries/underscore-min.js",
@@ -39,10 +40,22 @@ var jsDestination = 'dist';
 gulp.task('scripts', function() {  
     return gulp.src(jsFiles)
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(jsDestination))
+        .pipe(gulp.dest(jsDestination));
         // .pipe(rename('scripts.min.js'))
         // .pipe(uglify())
         // .pipe(gulp.dest(jsDestination));
+});
+
+gulp.task('add', function() {  
+    return gulp.src('.')
+  		.pipe(git.add());
+});
+
+gulp.task('addandcommitandpush', function() {  
+    return gulp.src('.')
+  		.pipe(git.add())
+  		.pipe(git.commit('auto commit'))
+  		.pipe(git.push());
 });
 
 gulp.task('watch', function() {

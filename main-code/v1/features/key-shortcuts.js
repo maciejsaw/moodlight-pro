@@ -15,9 +15,12 @@ var checkIfTextInputIsInFocus = function() {
 
 $(document).on('keydown', function(e){
 	if( !checkIfTextInputIsInFocus() ) {
+
+		//when keyboard is clicked, always hide the menu
+		enterFullscreenMode();
+
 		if (e.keyCode === keyNameToCode["Space"]) { 
 			toggleStartOrStop();
-			enterFullscreenMode();
 		} else if (e.keyCode === keyNameToCode["B"]) {
 		    $('[action-checkbox="blendingColors"]').trigger('click');
 		} else if (e.keyCode === keyNameToCode["Left"]) {

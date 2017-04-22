@@ -51,6 +51,12 @@ gulp.task('add', function() {
   		.pipe(git.add());
 });
 
+gulp.task('addandcommit', function() {  
+    return gulp.src('.')
+  		.pipe(git.add())
+  		.pipe(git.commit('auto commit'));
+});
+
 gulp.task('addandcommitandpush', function() {  
     return gulp.src('.')
   		.pipe(git.add())

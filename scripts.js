@@ -1814,13 +1814,23 @@ $(document).on('keydown', function(e){
 			$('[action-tap-tempo]').trigger('mousedown');
 		//binding numers to presets	
 		} else if (e.keyCode === keyNameToCode["1"]) {
-		    $('[action-checkbox="blendingColors"]').trigger('click');
-		} else if (e.keyCode === keyNameToCode["Left"]) {
-		    $('[action-tempo-divide-2]').trigger('click');
-		} else if (e.keyCode === keyNameToCode["Right"]) {
-		    $('[action-tempo-multiply-2]').trigger('click');
-		} else if (e.keyCode === keyNameToCode["T"]) {
-			$('[action-tap-tempo]').trigger('mousedown');
+		    triggerPlayOfPresetOfIndexX(1);
+		} else if (e.keyCode === keyNameToCode["2"]) {
+		    triggerPlayOfPresetOfIndexX(2);
+		} else if (e.keyCode === keyNameToCode["3"]) {
+		    triggerPlayOfPresetOfIndexX(3);
+		} else if (e.keyCode === keyNameToCode["4"]) {
+		    triggerPlayOfPresetOfIndexX(4);
+		} else if (e.keyCode === keyNameToCode["5"]) {
+		    triggerPlayOfPresetOfIndexX(5);
+		} else if (e.keyCode === keyNameToCode["6"]) {
+		    triggerPlayOfPresetOfIndexX(6);
+		} else if (e.keyCode === keyNameToCode["7"]) {
+		    triggerPlayOfPresetOfIndexX(7);
+		} else if (e.keyCode === keyNameToCode["8"]) {
+		    triggerPlayOfPresetOfIndexX(8);
+		} else if (e.keyCode === keyNameToCode["9"]) {
+		    triggerPlayOfPresetOfIndexX(9);
 		}
 	}
 });
@@ -1828,7 +1838,6 @@ $(document).on('keydown', function(e){
 function triggerPlayOfPresetOfIndexX(indexNumber) {
 	$('.presets-list__row[data-bind-repeatable-clone="true"]').eq(indexNumber).find('[action-play-preset="true"]').trigger('click');
 };
-////
 
 ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 	{

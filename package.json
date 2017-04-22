@@ -1,0 +1,32 @@
+{
+  "name": "moodlight-pro",
+  "version": "1.0.0",
+  "description": "Hosting HTML, CSS and JS for Moodlight 2.0 project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-sourcemap": "^1.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejsaw/moodlight-pro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejsaw/moodlight-pro/issues"
+  },
+  "homepage": "https://github.com/maciejsaw/moodlight-pro#readme"
+}

@@ -1746,7 +1746,7 @@ $(document).on('touchstart', '.main-visualisations', function() {
 });
 
 //prevent hiding when clicking in the menu
-$(document).on('click', '.left-menu', function() {
+$(document).on('click', '.left-menu', function(event) {
     clearTimeout(mouseMovementHideTimer);
     clearTimeout(mouseMovementShowTimer);
 
@@ -1828,7 +1828,7 @@ $(document).on('keydown', function(e){
 function triggerPlayOfPresetOfIndexX(indexNumber) {
 	$('.presets-list__row[data-bind-repeatable-clone="true"]').eq(indexNumber).find('[action-play-preset="true"]').trigger('click');
 };
-//
+////
 
 ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 	{

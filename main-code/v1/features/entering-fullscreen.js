@@ -4,7 +4,7 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 		$('body').fullscreen();
 		setTimeout(function() {
 			enterFullscreenMode(); //also hides the menu
-		}, 2000);
+		}, 1000);
 	}
 });		
 

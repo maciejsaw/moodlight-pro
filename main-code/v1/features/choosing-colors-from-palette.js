@@ -21,5 +21,5 @@ function appendColorToDropdowns(colorName) {
 }
 
 $.each(colorsPaletteTable, function(arrayIndex, arrayValue) {
-	//////
+	appendColorToDropdowns(arrayValue);
 });

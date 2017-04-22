@@ -2046,7 +2046,7 @@ function appendColorToDropdowns(colorName) {
 	$newDropdownChoice.find('.color-symbol-icon').css('background-color', colorName);
 	
 	var $newDropdownChosen = $dropdownChosenTemplate.clone();
-	$newDropdownChosen.find('.color-symbol-icon').css('background-color', colorName).addClass('is-hidden');
+	$newDropdownChosen.addClass('is-hidden').find('.color-symbol-icon').css('background-color', colorName);
 
 	$dropdownChosenItemsToAppendTo.append($newDropdownChosen);
 	$dropdownChoicesToAppendTo.append($newDropdownChoice);

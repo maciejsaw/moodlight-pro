@@ -28,23 +28,23 @@ $(document).on('keydown', function(e){
 			$('[action-tap-tempo]').trigger('mousedown');
 		//binding numers to presets	
 		} else if (e.keyCode === keyNameToCode["1"]) {
-		    triggerPlayOfPresetOfIndexX(1);
+		    triggerPlayOfPresetOfIndexX(0);
 		} else if (e.keyCode === keyNameToCode["2"]) {
-		    triggerPlayOfPresetOfIndexX(2);
+		    triggerPlayOfPresetOfIndexX(1);
 		} else if (e.keyCode === keyNameToCode["3"]) {
-		    triggerPlayOfPresetOfIndexX(3);
+		    triggerPlayOfPresetOfIndexX(2);
 		} else if (e.keyCode === keyNameToCode["4"]) {
-		    triggerPlayOfPresetOfIndexX(4);
+		    triggerPlayOfPresetOfIndexX(3);
 		} else if (e.keyCode === keyNameToCode["5"]) {
-		    triggerPlayOfPresetOfIndexX(5);
+		    triggerPlayOfPresetOfIndexX(4);
 		} else if (e.keyCode === keyNameToCode["6"]) {
-		    triggerPlayOfPresetOfIndexX(6);
+		    triggerPlayOfPresetOfIndexX(5);
 		} else if (e.keyCode === keyNameToCode["7"]) {
-		    triggerPlayOfPresetOfIndexX(7);
+		    triggerPlayOfPresetOfIndexX(6);
 		} else if (e.keyCode === keyNameToCode["8"]) {
-		    triggerPlayOfPresetOfIndexX(8);
+		    triggerPlayOfPresetOfIndexX(7);
 		} else if (e.keyCode === keyNameToCode["9"]) {
-		    triggerPlayOfPresetOfIndexX(9);
+		    triggerPlayOfPresetOfIndexX(8);
 		}
 	}
 });

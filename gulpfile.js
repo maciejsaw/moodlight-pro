@@ -64,8 +64,8 @@ gulp.task('push', function() {
 });
 
 var filesToWatch = [
-	"*.js",
-	"*.css"
+	"**.js",
+	"**.css"
 ];
 
 gulp.task('watch', function() {

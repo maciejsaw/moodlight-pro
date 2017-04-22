@@ -26,6 +26,20 @@ $(document).on('keydown', function(e){
 		    $('[action-tempo-multiply-2]').trigger('click');
 		} else if (e.keyCode === keyNameToCode["T"]) {
 			$('[action-tap-tempo]').trigger('mousedown');
+		//binding numers to presets	
+		} else if (e.keyCode === keyNameToCode["1"]) {
+		    $('[action-checkbox="blendingColors"]').trigger('click');
+		} else if (e.keyCode === keyNameToCode["Left"]) {
+		    $('[action-tempo-divide-2]').trigger('click');
+		} else if (e.keyCode === keyNameToCode["Right"]) {
+		    $('[action-tempo-multiply-2]').trigger('click');
+		} else if (e.keyCode === keyNameToCode["T"]) {
+			$('[action-tap-tempo]').trigger('mousedown');
 		}
 	}
 });
+
+function triggerPlayOfPresetOfIndexX(indexNumber) {
+	$('.presets-list__row[data-bind-repeatable-clone="true"]').eq(indexNumber).find('[action-play-preset="true"]').trigger('click');
+};
+//

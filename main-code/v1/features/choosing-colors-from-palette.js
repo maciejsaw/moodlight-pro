@@ -12,7 +12,7 @@ var colorsPaletteTable = [
 	'Coral',
 	'DarkOrange',
 	'Orange',
-	'yellow'
+	'yellow',
 ];
 
 function appendColorToDropdowns(colorName) {

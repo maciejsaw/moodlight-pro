@@ -1,10 +1,10 @@
 var scriptsToLoad = [
+	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/underscore-min.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/uuid.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery.transit.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/tooltipster/tooltipster.bundle.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/mini-meteor.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery-deparam.js",
-	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery.scrollTo.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/jquery.scrollTo.min.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/query-string-router.js",
 	"https://maciejsaw.github.io/moodlight-pro/general-custom-js/reactiveLocalStorage.js",

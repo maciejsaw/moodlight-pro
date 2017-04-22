@@ -2037,7 +2037,7 @@ var colorsPaletteTable = [
 	'MediumVioletRed',
 	'LightCoral',
 	'Crimson',
-	'FireBrick'
+	'FireBrick',
 	'DarkRed',
 	'OrangeRed',
 	'Tomato',

@@ -42,4 +42,4 @@ $(document).on('keydown', function(e){
 function triggerPlayOfPresetOfIndexX(indexNumber) {
 	$('.presets-list__row[data-bind-repeatable-clone="true"]').eq(indexNumber).find('[action-play-preset="true"]').trigger('click');
 };
-//
+////

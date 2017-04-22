@@ -1656,6 +1656,9 @@ $(document).on('click', '[action-tempo-divide-4]', function() {
 	divideTempo(4);
 });
 
+//fix placement of last colors dropdown
+$('[action-select-dropodwn="color__4"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
+
 ReactiveLocalStorage.setParam('startedOrStopped', 'stopped'); //always stop when refreshing the page
 
 $(document).on('click', '[action-start]', function() {

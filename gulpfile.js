@@ -57,13 +57,19 @@ gulp.task('addandcommit', function() {
   		.pipe(git.commit('auto commit'));
 });
 
-gulp.task('addandcommitandpush', function() {  
-    return gulp.src('.')
-  		.pipe(git.add())
-  		.pipe(git.commit('auto commit'))
-  		.pipe(git.push());
+gulp.task('push', function() {  
+	git.push('origin', 'master', function (err) {
+	  if (err) throw err;
+	});
 });
 
+var filesToWatch = [
+	"*.js",
+	"*.css"
+];
+
+//
+
 gulp.task('watch', function() {
-  gulp.watch(jsFiles, ['scripts']);
+  gulp.watch(filesToWatch, ['scripts', 'addandcommit', 'push']);
 });

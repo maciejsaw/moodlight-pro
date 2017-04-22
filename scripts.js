@@ -2042,7 +2042,8 @@ function ReactiveLocalStorageDataBindArrayList(paramNameWithArray, functionToMod
 
 	ReactiveLocalStorage.onParamChange(paramNameWithArray, function(value) {
 
-		var $thisList = $('[data-bind-array="'+paramNameWithArray+'"]');
+		var $thisListBeforeMorphing = $('[data-bind-array="'+paramNameWithArray+'"]');
+		var $thisList = $thisListBeforeMorphing.clone();
 
 		//there might be more than one table binded to the same array, hence "each"
 		$thisList.each(function(thisListIndex, thisListValue) {
@@ -2088,6 +2089,8 @@ function ReactiveLocalStorageDataBindArrayList(paramNameWithArray, functionToMod
 			}
 
 		});
+
+		morphodom($thisListBeforeMorphing, $thisList);
 	});
 }
 

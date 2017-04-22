@@ -68,6 +68,8 @@ var filesToWatch = [
 	"**/*.css"
 ];
 
+//
+
 gulp.task('watch', function() {
   gulp.watch(filesToWatch, ['scripts', 'addandcommit', 'push']);
 });

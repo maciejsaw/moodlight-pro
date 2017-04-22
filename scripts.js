@@ -2067,4 +2067,9 @@ $.each(colorsPaletteTable, function(arrayIndex, arrayValue) {
 	appendColorToDropdowns(arrayValue);
 });
 
+ReactiveLocalStorage.retriggerOnParamChange('color__1');
+ReactiveLocalStorage.retriggerOnParamChange('color__2');
+ReactiveLocalStorage.retriggerOnParamChange('color__3');
+ReactiveLocalStorage.retriggerOnParamChange('color__4');
+
 //# sourceMappingURL=scripts.js.map

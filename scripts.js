@@ -1824,7 +1824,6 @@ function toggleStartOrStop() {
 		ReactiveLocalStorage.setParam('startedOrStopped', 'stopped');
 	} else if (ReactiveLocalStorage.getParam('startedOrStopped') === 'stopped') {
 		ReactiveLocalStorage.setParam('startedOrStopped', 'started');
-		$('body').fullscreen();
 	}
 }
 
@@ -2139,5 +2138,11 @@ ReactiveLocalStorage.retriggerOnParamChange('color__1');
 ReactiveLocalStorage.retriggerOnParamChange('color__2');
 ReactiveLocalStorage.retriggerOnParamChange('color__3');
 ReactiveLocalStorage.retriggerOnParamChange('color__4');
+
+ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
+	if (value === 'started') {
+		$('body').fullscreen();
+	}
+});		
 
 //# sourceMappingURL=scripts.js.map

@@ -6,7 +6,6 @@ function toggleStartOrStop() {
 		ReactiveLocalStorage.setParam('startedOrStopped', 'stopped');
 	} else if (ReactiveLocalStorage.getParam('startedOrStopped') === 'stopped') {
 		ReactiveLocalStorage.setParam('startedOrStopped', 'started');
-		$('body').fullscreen();
 	}
 }
 

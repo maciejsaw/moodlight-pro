@@ -2090,7 +2090,7 @@ function ReactiveLocalStorageDataBindArrayList(paramNameWithArray, functionToMod
 
 		});
 
-		morphodom($thisListBeforeMorphing, $thisList);
+		morphdom($thisListBeforeMorphing, $thisList);
 	});
 }
 

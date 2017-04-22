@@ -37,7 +37,6 @@ a:hover {
   right: 0px;
   bottom: 0px;
   overflow: hidden;
-  min-width: 360px;
 }
 
 .body-wrapper.is-fullscreen {
@@ -76,7 +75,7 @@ a:hover {
   top: 0px;
   bottom: 0px;
   overflow: auto;
-  width: 320px;
+  width: 290px;
   padding: 23px;
   border-right: 1px none #3990ac;
   background-color: #010918;
@@ -262,7 +261,7 @@ a:hover {
 }
 
 .bem-select-dropdown__button.for-color-icon {
-  padding-right: 29px;
+  padding-right: 24px;
   padding-left: 11px;
 }
 
@@ -271,7 +270,7 @@ a:hover {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 28px;
+  width: 24px;
   padding-top: 7px;
   font-family: 'Material design iconic font', sans-serif;
   font-size: 20px;

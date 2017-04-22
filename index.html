@@ -1,1 +1,430 @@
-Nothing here yet...
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Sat Apr 22 2017 14:08:51 GMT+0000 (UTC)  -->
+<html data-wf-page="58e7da07da41412c17089488" data-wf-site="58e7da07da41412c17089487">
+<head>
+  <meta charset="utf-8">
+  <title>Moodlight PRO - Free Online Strobe/Disco/Party Light</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/moodlight-2-0-free-online-strobe-party.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/tooltipster/tooltipster.bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/main-code/v1/general/tooltipster-additional-themes.css">
+  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/main-code/v1/general/additional-custom-css.css">
+</head>
+<body>
+  <div class="body-wrapper">
+    <div class="initial-load-overlay">
+      <div class="initial-load-overlay__spinner">
+        <div class="bem-spinner">
+          <div animation-spin="true" class="bem-spinner__icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="main-visualisations">
+      <div class="is-blended main-visualisations__fullscreen-color"></div>
+    </div>
+    <div class="left-menu">
+      <div class="left-menu__inner-wrapper">
+        <div class="logo-section">
+          <h1 class="logo__header">Moodlight PRO</h1>
+          <h4 class="logo__claim">Online Strobe/Disco/Party Light</h4>
+        </div>
+        <div class="controlling-element for-play-button">
+          <div action-start="true" class="bem-button is-big-with-icon">
+            <div class="bem-button__inner-icon"><span class="bem-font-icon"></span>
+            </div>
+          </div>
+          <div action-stop="true" class="bem-button is-big-with-icon is-hidden">
+            <div class="bem-button__inner-icon"><span class="bem-font-icon"></span>
+            </div>
+          </div>
+        </div>
+        <div class="controlling-element">
+          <div class="controlling-element__header">
+            <div class="controlling-element__label">Tempo</div>
+            <div class="controlling-element__header-line"></div>
+          </div>
+          <div class="tempo-input">
+            <input class="bem-text-input for-tempo w-input" data-name="tempo" id="tempo" maxlength="256" name="tempo" type="text">
+            <div class="tempo__multiply-factor" title="Show how often the colors will change in relation to bpm tempo" tooltipster="top">BPM @x <span data-bind="tempo-multiply-factor">1</span>
+            </div>
+          </div>
+          <div class="tempo__quick-buttons-row w-clearfix">
+            <div class="tempo-input__tap-button">
+              <div action-tap-tempo="true" class="bem-button for-tap-button" title="Click this button several times when you here beat in music to set tempo." tooltipster="right">TAP</div>
+            </div>
+            <div class="tempo-input__tempo-factor-buttons">
+              <div action-tempo-divide-2="true" class="bem-button in-quick-buttons-row">:2</div>
+              <div action-tempo-multiply-2="true" class="bem-button in-quick-buttons-row">x2</div>
+            </div>
+          </div>
+        </div>
+        <div class="controlling-element">
+          <div class="controlling-element__header">
+            <div class="controlling-element__label">Colors</div>
+            <div class="controlling-element__header-line"></div>
+          </div>
+          <div class="colors-dropdown-list">
+            <div action-select-dropdown="color__1" class="colors-dropdown" skip-setting-first-available-value-as-default="true">
+              <div class="bem-select-dropdown w-dropdown" data-delay="0">
+                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                  <div chosen-value="white" class="chosen-color-holder" color-chosen-template="true">
+                    <div class="color-symbol-icon is-white"></div>
+                  </div>
+                  <div chosen-value="null" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-null"></div>
+                  </div>
+                  <div chosen-value="black" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-black"></div>
+                  </div>
+                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-lime"></div>
+                  </div>
+                  <div chosen-value="red" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-red"></div>
+                  </div>
+                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-blue"></div>
+                  </div>
+                  <div class="bem-select-dropdown__button-arrow">
+                    <div class="bem-select-dropdown__button-arrow-icon"></div>
+                  </div>
+                </div>
+                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                  </div>
+                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                  </div>
+                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                  </div>
+                  <div choice-value="red" class="bem-select-dropdown__list-choice with-color-picker" color-choice-template="true">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                  </div>
+                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                  </div>
+                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div action-select-dropdown="color__2" class="colors-dropdown" skip-setting-first-available-value-as-default="true">
+              <div class="bem-select-dropdown w-dropdown" data-delay="0">
+                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                  <div chosen-value="white" class="chosen-color-holder" color-chosen-template="true">
+                    <div class="color-symbol-icon is-white"></div>
+                  </div>
+                  <div chosen-value="null" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-null"></div>
+                  </div>
+                  <div chosen-value="black" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-black"></div>
+                  </div>
+                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-lime"></div>
+                  </div>
+                  <div chosen-value="red" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-red"></div>
+                  </div>
+                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-blue"></div>
+                  </div>
+                  <div class="bem-select-dropdown__button-arrow">
+                    <div class="bem-select-dropdown__button-arrow-icon"></div>
+                  </div>
+                </div>
+                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                  </div>
+                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                  </div>
+                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                  </div>
+                  <div choice-value="red" class="bem-select-dropdown__list-choice with-color-picker" color-choice-template="true">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                  </div>
+                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                  </div>
+                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div action-select-dropdown="color__3" class="colors-dropdown" skip-setting-first-available-value-as-default="true">
+              <div class="bem-select-dropdown w-dropdown" data-delay="0">
+                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                  <div chosen-value="white" class="chosen-color-holder" color-chosen-template="true">
+                    <div class="color-symbol-icon is-white"></div>
+                  </div>
+                  <div chosen-value="null" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-null"></div>
+                  </div>
+                  <div chosen-value="black" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-black"></div>
+                  </div>
+                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-lime"></div>
+                  </div>
+                  <div chosen-value="red" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-red"></div>
+                  </div>
+                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-blue"></div>
+                  </div>
+                  <div class="bem-select-dropdown__button-arrow">
+                    <div class="bem-select-dropdown__button-arrow-icon"></div>
+                  </div>
+                </div>
+                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                  </div>
+                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                  </div>
+                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                  </div>
+                  <div choice-value="red" class="bem-select-dropdown__list-choice with-color-picker" color-choice-template="true">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                  </div>
+                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                  </div>
+                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div action-select-dropdown="color__4" class="colors-dropdown" skip-setting-first-available-value-as-default="true">
+              <div class="bem-select-dropdown w-dropdown" data-delay="0">
+                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                  <div chosen-value="white" class="chosen-color-holder" color-chosen-template="true">
+                    <div class="color-symbol-icon is-white"></div>
+                  </div>
+                  <div chosen-value="null" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-null"></div>
+                  </div>
+                  <div chosen-value="black" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-black"></div>
+                  </div>
+                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-lime"></div>
+                  </div>
+                  <div chosen-value="red" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-red"></div>
+                  </div>
+                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                    <div class="color-symbol-icon is-blue"></div>
+                  </div>
+                  <div class="bem-select-dropdown__button-arrow">
+                    <div class="bem-select-dropdown__button-arrow-icon"></div>
+                  </div>
+                </div>
+                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                  </div>
+                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                  </div>
+                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                  </div>
+                  <div choice-value="red" class="bem-select-dropdown__list-choice with-color-picker" color-choice-template="true">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                  </div>
+                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                  </div>
+                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                    <div class="color-choice-in-dropdown">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="colors__blend-options">
+            <div action-checkbox="blendingColors" class="bem-checkbox">
+              <div class="bem-checkbox__checkmark">
+                <div class="bem-checkbox__tick"></div>
+              </div>
+              <div class="bem-checkbox__label">Blend colors</div>
+            </div>
+          </div>
+        </div>
+        <div class="controlling-element">
+          <div class="controlling-element__header">
+            <div class="controlling-element__label">Presets</div>
+            <div class="controlling-element__header-line"></div>
+            <div class="is-hidden-for-future preset-list__add-preset-button">
+              <div action-save-preset="true" class="bem-button for-adding-preset in-preset-icon">
+                <div class="bem-button__inner-icon is-small"><span class="bem-font-icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="presets-list" data-bind-array="listOfPresets">
+            <div class="presets-list__row" data-bind-repeatable-template="true">
+              <div class="preset">
+                <div class="preset__input">
+                  <input action-set-preset-name="true" class="bem-text-input for-preset-name w-input" maxlength="256" placeholder="Enter preset name" type="text">
+                </div>
+                <div action-play-preset="true" class="bem-button in-preset-icon is-wider">
+                  <div class="bem-button__inner-icon is-small"><span class="bem-font-icon"></span>
+                  </div>
+                </div>
+                <div action-remove-preset="true" class="bem-button in-preset-icon">
+                  <div class="bem-button__inner-icon is-small"><span class="bem-font-icon"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preset-save-button">
+            <div class="preset">
+              <div class="preset__input">
+                <div class="preset__current-settings-label">Current settings</div>
+              </div>
+              <div action-save-preset="true" class="bem-button in-preset-icon with-text">SAVE</div>
+            </div>
+          </div>
+        </div>
+        <div class="controlling-element">
+          <div class="controlling-element__header">
+            <div class="controlling-element__label">Keyboard shortcuts</div>
+            <div class="controlling-element__header-line"></div>
+            <div class="is-hidden-for-future preset-list__add-preset-button">
+              <div action-save-preset="true" class="bem-button for-adding-preset in-preset-icon">
+                <div class="bem-button__inner-icon is-small"><span class="bem-font-icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span">Space</div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Start/Stop</div>
+            </div>
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span with-icon"></div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Double the speed</div>
+            </div>
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span with-icon"></div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Lower the speed</div>
+            </div>
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span">T</div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Tap tempo</div>
+            </div>
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span">B</div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Toggle blend colors</div>
+            </div>
+            <div class="info__keyboard-shortcut-row">
+              <div class="info__keyboard-shortcut-key-symbol">
+                <div class="info__keyboard-shortcut-span">1</div>
+                <div class="info__keyboard-shortcut-hyphen">-</div>
+                <div class="info__keyboard-shortcut-span">9</div>
+              </div>
+              <div class="info__keyboard-shortcut-description">Play specific preset</div>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+          <div class="about__text">Created in 2017 by <a href="http://maciejsawicki.com/" target="_blank">MaciejSawicki.com</a>
+            <br>Join this project on <a href="https://github.com/maciejsaw/moodlight-pro" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script type="text/javascript" src="https://maciejsaw.github.io/moodlight-pro/scripts.js"></script>
+</body>
+</html>

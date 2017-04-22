@@ -33,6 +33,7 @@ var jsFiles = [
 	"./main-code/v1/features/key-shortcuts.js",
 	"./main-code/v1/features/presets-playing-and-saving.js",
 	"./main-code/v1/features/tapping-tempo.js",
+	"./main-code/v1/features/choosing-colors-from-palette.js"
 ]; 
 
 var jsDestination = '.';

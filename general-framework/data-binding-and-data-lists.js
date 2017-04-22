@@ -80,7 +80,7 @@ function ReactiveLocalStorageDataBindArrayList(paramNameWithArray, functionToMod
 
 		});
 
-		morphdom($thisListBeforeMorphing, $thisList);
+		morphdom($thisListBeforeMorphing[0], $thisList[0]);
 	});
 }
 

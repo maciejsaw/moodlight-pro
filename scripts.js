@@ -2043,10 +2043,10 @@ function appendColorToDropdowns(colorName) {
 	var $dropdownChosenItemsToAppendTo = $('.colors-dropdown').find('.bem-select-dropdown__button.for-color-icon');
 
 	var $newDropdownChoice = $dropdownChoiceTemplate.clone();
-	$newDropdownChoice.find('.color-symbol-icon').css('background-color', colorName);
+	$newDropdownChoice.attr('choice-value', colorName).find('.color-symbol-icon').css('background-color', colorName);
 	
 	var $newDropdownChosen = $dropdownChosenTemplate.clone();
-	$newDropdownChosen.addClass('is-hidden').find('.color-symbol-icon').css('background-color', colorName);
+	$newDropdownChosen.addClass('is-hidden').attr('chosen-value', colorName).find('.color-symbol-icon').css('background-color', colorName);
 
 	$dropdownChosenItemsToAppendTo.append($newDropdownChosen);
 	$dropdownChoicesToAppendTo.append($newDropdownChoice);

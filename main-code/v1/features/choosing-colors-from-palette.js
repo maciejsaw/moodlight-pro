@@ -1,7 +1,7 @@
 var colorsPaletteTable = [
 	'yellow',
 	'pink',
-	'aqua'
+	'aqua',
 ];
 
 function appendColorToDropdowns(colorName) {

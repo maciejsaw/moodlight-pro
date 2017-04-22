@@ -47,18 +47,19 @@ gulp.task('scripts', function() {
         // .pipe(gulp.dest(jsDestination));
 });
 
-gulp.task('add', function() {  
-    return gulp.src('.')
-  		.pipe(git.add());
-});
-
-gulp.task('addandcommit', function() {  
+gulp.task('buildScriptsThenAddAndCommit', ['scripts'], function() {  
     return gulp.src('.')
   		.pipe(git.add())
   		.pipe(git.commit('auto commit'));
 });
 
 gulp.task('push', function() {  
+	git.push('origin', 'master', function (err) {
+	  if (err) throw err;
+	});
+});
+
+gulp.task('buildScriptsThenAddAndCommitThenPush', ['buildScriptsThenAddAndCommit'], function() {  
 	git.push('origin', 'master', function (err) {
 	  if (err) throw err;
 	});
@@ -72,5 +73,5 @@ var filesToWatch = [
 //
 
 gulp.task('watch', function() {
-  gulp.watch(filesToWatch, ['scripts', 'addandcommit', 'push']);
+  gulp.watch(filesToWatch, ['buildScriptsThenAddAndCommitThenPush']);
 });

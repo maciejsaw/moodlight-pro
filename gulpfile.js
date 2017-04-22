@@ -7,6 +7,7 @@ var git = require('gulp-git');
 var jsFiles = [
 	"./plugins-and-libraries/underscore-min.js",
 	"./plugins-and-libraries/uuid.js",
+	"./plugins-and-libraries/jquery.fullscreen.min.js",
 	"./plugins-and-libraries/jquery.transit.min.js",
 	"./plugins-and-libraries/tooltipster/tooltipster.bundle.min.js",
 	"./plugins-and-libraries/mini-meteor.min.js",

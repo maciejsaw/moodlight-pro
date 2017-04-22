@@ -2145,7 +2145,7 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 		$('body').fullscreen();
 		setTimeout(function() {
 			enterFullscreenMode(); //also hides the menu
-		}, 1500);
+		}, 2000);
 	}
 });		
 

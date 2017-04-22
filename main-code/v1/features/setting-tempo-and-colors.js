@@ -132,3 +132,6 @@ $(document).on('click', '[action-tempo-multiply-4]', function() {
 $(document).on('click', '[action-tempo-divide-4]', function() {
 	divideTempo(4);
 });
+
+//fix placement of last colors dropdown
+$('[action-select-dropodwn="color__4"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');

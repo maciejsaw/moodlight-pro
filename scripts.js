@@ -2743,10 +2743,15 @@ var TapTempo = (function(){
 
 })();
 
-$(document).on('touchstart mousedown', '[action-tap-tempo]', function(event) {
-  event.preventDefault();
-  TapTempo.triggerCalculation();
-});
+if (Modernizr.touch) {
+  $(document).on('touchstart', '[action-tap-tempo]', function(event) {
+    TapTempo.triggerCalculation();
+  });
+} else {
+  $(document).on('mousedown', '[action-tap-tempo]', function(event) {
+    TapTempo.triggerCalculation();
+  });
+}
 
 $(document).on('tempoSetByTapping', function(event, bpm) {
   ReactiveLocalStorage.setParam('tempo', bpm);

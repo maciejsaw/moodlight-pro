@@ -2438,6 +2438,7 @@ $('body').on('mousemove', '.main-visualisations, .left-menu', function(event) {
         mouseMovementCounter = 0;
     }, 4000);
 
+    event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
 
 //also show bar on touchstart for mobile

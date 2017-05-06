@@ -2747,7 +2747,7 @@ $(document).on('mousedown', '[action-tap-tempo]', function() {
   TapTempo.triggerCalculation();
 });
 
-$(document).on('mousedown', '[action-tap-tempo]', function(event) {
+$(document).on('touchstart', '[action-tap-tempo]', function(event) {
   event.preventDefault();
   TapTempo.triggerCalculation();
 });

@@ -9,6 +9,6 @@ function enableNoSleep() {
   console.log('no sleep enabled');
 }
 
-$(document).on('click.enableNoSleep', 'body', function() {
+$(document).on('click.enableNoSleep', '[action-start]', function() {
 	enableNoSleep();
 });

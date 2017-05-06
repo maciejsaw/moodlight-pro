@@ -2467,7 +2467,7 @@ $(document).on('touchstart', '.quick-buttons', function() {
 });
 
 //prevent hiding when clicking in the menu
-$(document).on('click', '.left-menu', function(event) {
+$(document).on('click touchstart', '.left-menu', function(event) {
     clearTimeout(mouseMovementHideTimer);
     clearTimeout(mouseMovementShowTimer);
 

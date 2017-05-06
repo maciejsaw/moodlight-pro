@@ -18,6 +18,16 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__3: 'null',
 		color__4: 'null',
 		blendingColors: 'true'
+	},
+	{
+		id: 'default3',
+		name: "Slow purple",
+		tempoMultiplyFactor: 0.5,
+		color__1: 'MediumPurple',
+		color__2: 'MidnightBlue',
+		color__3: 'null',
+		color__4: 'null',
+		blendingColors: 'true'
 	}
 ]);
 

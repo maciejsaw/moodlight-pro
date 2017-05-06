@@ -2460,6 +2460,20 @@ $(document).on('touchstart', '.main-visualisations', function() {
     event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
 
+//also show bar on touchstart for mobile
+$(document).on('touchstart', '.quick-buttons', function() {
+    clearTimeout(mouseMovementHideTimer);
+    clearTimeout(mouseMovementShowTimer);
+    
+    exitFullscreenMode();
+
+    mouseMovementHideTimer = setTimeout(function(){ 
+        enterFullscreenMode();
+    }, 4000);
+
+    event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
+});
+
 //prevent hiding when clicking in the menu
 $(document).on('click', '.left-menu', function(event) {
     clearTimeout(mouseMovementHideTimer);

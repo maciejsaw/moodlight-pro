@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Sat Apr 22 2017 15:21:53 GMT+0000 (UTC)  -->
+<!--  Last Published: Sat May 06 2017 12:10:06 GMT+0000 (UTC)  -->
 <html data-wf-page="58e7da07da41412c17089488" data-wf-site="58e7da07da41412c17089487">
 <head>
   <meta charset="utf-8">
@@ -36,6 +36,50 @@
 </head>
 <body>
   <div class="body-wrapper">
+    <div class="quick-buttons">
+      <div action-start="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="quick-button__icon-inside"><span class="bem-font-icon is-icon-in-quick-buttons"></span>
+          </div>
+        </div>
+      </div>
+      <div action-stop="true" class="is-hidden quick-button">
+        <div class="quick-button__icon">
+          <div class="quick-button__icon-inside"><span class="bem-font-icon is-icon-in-quick-buttons"></span>
+          </div>
+        </div>
+      </div>
+      <div action-tap-tempo="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">T</div>
+        </div>
+      </div>
+      <div action-tempo-divide-2="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">:2</div>
+        </div>
+      </div>
+      <div action-tempo-multiply-2="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">x2</div>
+        </div>
+      </div>
+      <div action-play-preset-1="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">1</div>
+        </div>
+      </div>
+      <div action-play-preset-2="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">2</div>
+        </div>
+      </div>
+      <div action-play-preset-3="true" class="quick-button">
+        <div class="quick-button__icon">
+          <div class="is-text quick-button__icon-inside">3</div>
+        </div>
+      </div>
+    </div>
     <div class="initial-load-overlay">
       <div class="initial-load-overlay__spinner">
         <div class="bem-spinner">
@@ -53,7 +97,7 @@
           <h4 class="logo__claim">Online Strobe/Disco/Party Light</h4>
         </div>
         <div class="controlling-element for-play-button">
-          <div action-start="true" class="bem-button is-big-with-icon">
+          <div action-start="true" class="bem-button is-big-with-icon" id="main-play-button">
             <div class="bem-button__inner-icon"><span class="bem-font-icon"></span>
             </div>
           </div>

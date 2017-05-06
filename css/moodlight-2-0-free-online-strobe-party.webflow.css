@@ -74,6 +74,7 @@ a:hover {
   left: 0px;
   top: 0px;
   bottom: 0px;
+  z-index: 2;
   overflow: auto;
   width: 290px;
   padding: 23px;
@@ -209,6 +210,8 @@ a:hover {
 
 .bem-button.for-tap-button {
   display: block;
+  -webkit-transition-property: none;
+  transition-property: none;
 }
 
 .bem-button.is-big-with-icon {
@@ -698,6 +701,90 @@ a:hover {
   display: inline-block;
   margin-right: 3px;
   margin-left: 2px;
+}
+
+.quick-buttons {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.quick-buttons:hover {
+  opacity: 0.31;
+}
+
+.quick-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0.54;
+  cursor: pointer;
+}
+
+.quick-button.is-hidden {
+  display: none;
+}
+
+.quick-button__icon {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: rgba(1, 9, 24, .78);
+  color: #fff;
+}
+
+.quick-button__icon:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.quick-button__icon-inside {
+  text-align: center;
+}
+
+.quick-button__icon-inside.is-text {
+  font-size: 12px;
+}
+
+@media (max-width: 479px) {
+  .quick-buttons {
+    opacity: 0.31;
+  }
 }
 
 @font-face {

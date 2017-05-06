@@ -2884,7 +2884,7 @@ $(document).on('click', '[action-play-preset-4]', function() {
 
 var noSleep = new NoSleep();
 
-var toggleEl = document.querySelector("[action-start]");
+var toggleEl = document.querySelector("#main-play-button");
 toggleEl.addEventListener('click', function() {
     noSleep.enable(); // keep the screen on!
 }, false);

@@ -6,6 +6,7 @@ var noSleep = new NoSleep();
 function enableNoSleep() {
   noSleep.enable();
   $(document).off('click.enableNoSleep');
+  console.log('no sleep enabled');
 }
 
 $(document).on('click.enableNoSleep', 'body', function() {

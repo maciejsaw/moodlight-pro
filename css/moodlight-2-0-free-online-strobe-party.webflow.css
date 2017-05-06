@@ -353,8 +353,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
-  width: 135px;
-  max-height: 264px;
+  width: 140px;
+  max-height: 237px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;

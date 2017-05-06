@@ -2873,11 +2873,16 @@ var noSleep = new NoSleep();
 
 function enableNoSleep() {
   noSleep.enable();
-  document.removeEventListener('touchstart', enableNoSleep, false);
+  $(document).off('touchstart.enableNoSleep');
+  $(document).off('click.enableNoSleep');
 }
 
-// Enable wake lock.
-// (must be wrapped in a user input event handler e.g. a mouse or touch handler)
-document.addEventListener('touchstart', enableNoSleep, false);
+$(document).on('click.enableNoSleep', function() {
+	enableNoSleep();
+});
+
+$(document).on('touchstart.enableNoSleep', function() {
+	enableNoSleep();
+});
 
 //# sourceMappingURL=scripts.js.map

@@ -2743,11 +2743,7 @@ var TapTempo = (function(){
 
 })();
 
-$(document).on('mousedown', '[action-tap-tempo]', function() {
-  TapTempo.triggerCalculation();
-});
-
-$(document).on('touchstart', '[action-tap-tempo]', function(event) {
+$(document).on('touchstart mousedown', '[action-tap-tempo]', function(event) {
   event.preventDefault();
   TapTempo.triggerCalculation();
 });

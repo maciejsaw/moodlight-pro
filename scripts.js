@@ -2877,11 +2877,11 @@ function enableNoSleep() {
   $(document).off('click.enableNoSleep');
 }
 
-$(document).on('click.enableNoSleep', function() {
+$('body').on('click.enableNoSleep', function() {
 	enableNoSleep();
 });
 
-$(document).on('touchstart.enableNoSleep', function() {
+$('body').on('touchstart.enableNoSleep', function() {
 	enableNoSleep();
 });
 

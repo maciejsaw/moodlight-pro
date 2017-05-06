@@ -19,4 +19,5 @@ var noSleep = new NoSleep();
 var toggleEl = document.querySelector("#main-play-button");
 toggleEl.addEventListener('click', function() {
     noSleep.enable(); // keep the screen on!
+    console.log('no sleep enable');
 }, false);

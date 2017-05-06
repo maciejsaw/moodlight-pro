@@ -2418,7 +2418,7 @@ var mouseMovementHideTimer;
 var mouseMovementCounter = 0;
 var mouseMovementShowTimer = 0;
 
-$('body').on('mousemove', '.body-wrapper', function(event) {
+$('body').on('mousemove', '.main-visualisations, .left-menu', function(event) {
 
     clearTimeout(mouseMovementHideTimer);
     clearTimeout(mouseMovementShowTimer);

@@ -37,6 +37,7 @@ var jsFiles = [
 	"./main-code/v1/features/choosing-colors-from-palette.js",
 	"./main-code/v1/features/entering-fullscreen.js",
 	"./main-code/v1/features/quick-buttons.js",
+	"./main-code/v1/features/preventing-device-sleep.js"
 ]; 
 
 var jsDestination = '.';

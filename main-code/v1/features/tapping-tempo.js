@@ -55,7 +55,7 @@ var TapTempo = (function(){
 
     triggerTimer = setTimeout(function() {
         resetAllGatheredTappingData();
-    }, 2000);
+    }, 1800);
   }
 
   return {

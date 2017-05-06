@@ -341,7 +341,7 @@ a:hover {
 }
 
 .bem-select-dropdown__list.for-color-picker {
-  z-index: 1;
+  z-index: 2;
   margin-top: -1px;
   border: 1px solid #3990ac;
   border-radius: 4px;

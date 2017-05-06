@@ -2747,6 +2747,11 @@ $(document).on('mousedown', '[action-tap-tempo]', function() {
   TapTempo.triggerCalculation();
 });
 
+$(document).on('mousedown', '[action-tap-tempo]', function(event) {
+  event.preventDefault();
+  TapTempo.triggerCalculation();
+});
+
 $(document).on('tempoSetByTapping', function(event, bpm) {
   ReactiveLocalStorage.setParam('tempo', bpm);
 });

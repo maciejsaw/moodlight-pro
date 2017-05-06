@@ -16,7 +16,7 @@
 
 var noSleep = new NoSleep();
 
-$('[action-start]').addEventListener('click', function() {
+$('[action-start]').on('click', function() {
     noSleep.enable(); // keep the screen on!
     console.log('enable no sleep');
 }, false);

@@ -2873,15 +2873,10 @@ var noSleep = new NoSleep();
 
 function enableNoSleep() {
   noSleep.enable();
-  $(document).off('touchstart.enableNoSleep');
   $(document).off('click.enableNoSleep');
 }
 
 $(document).on('click.enableNoSleep', 'body', function() {
-	enableNoSleep();
-});
-
-$(document).on('touchstart.enableNoSleep', 'body', function() {
 	enableNoSleep();
 });
 

@@ -2461,16 +2461,8 @@ $(document).on('touchstart', '.main-visualisations', function() {
 });
 
 //also show bar on touchstart for mobile
-$(document).on('touchstart', '.quick-buttons', function() {
-    clearTimeout(mouseMovementHideTimer);
-    clearTimeout(mouseMovementShowTimer);
-    
-    exitFullscreenMode();
-
-    mouseMovementHideTimer = setTimeout(function(){ 
-        enterFullscreenMode();
-    }, 4000);
-
+$(document).on('touchstart', '.quick-buttons', function() {    
+    enterFullscreenMode();
     event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
 

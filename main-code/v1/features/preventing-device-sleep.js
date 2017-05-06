@@ -6,19 +6,8 @@ var noSleep = new NoSleep();
 function enableNoSleep() {
   noSleep.enable();
   $(document).off('click.enableNoSleep');
-  console.log('no sleep enabled 2');
-  window.alert('no sleep enabled 2');
 }
 
 $(document).on('click.enableNoSleep', '[action-start]', function() {
 	enableNoSleep();
 });
-
-
-// var noSleep = new NoSleep();
-
-// var toggleEl = document.querySelector("#main-play-button");
-// toggleEl.addEventListener('click', function() {
-//     noSleep.enable(); // keep the screen on!
-//     console.log('no sleep enable');
-// }, false);

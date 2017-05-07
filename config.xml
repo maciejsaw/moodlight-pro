@@ -19,6 +19,7 @@
   </author>
 
   <icon src="icon.png" />
+  <splash src="splash.png" />
 
   <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
      <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

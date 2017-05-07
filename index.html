@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Sat May 06 2017 12:24:56 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun May 07 2017 21:47:11 GMT+0000 (UTC)  -->
 <html data-wf-page="58e7da07da41412c17089488" data-wf-site="58e7da07da41412c17089487">
 <head>
   <meta charset="utf-8">
@@ -30,13 +30,13 @@
     ga('create', 'UA-97845148-1', 'auto');
     ga('send', 'pageview');
   </script>
-  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/plugins-and-libraries/tooltipster/tooltipster.bundle.min.css">
-  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/main-code/v1/general/tooltipster-additional-themes.css">
-  <link rel="stylesheet" type="text/css" href="https://maciejsaw.github.io/moodlight-pro/main-code/v1/general/additional-custom-css.css">
+  <link rel="stylesheet" type="text/css" href="/plugins-and-libraries/tooltipster/tooltipster.bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/main-code/v1/general/tooltipster-additional-themes.css">
+  <link rel="stylesheet" type="text/css" href="/moodlight-pro/main-code/v1/general/additional-custom-css.css">
 </head>
-<body>
+<body class="body">
   <div class="body-wrapper">
-    <div class="quick-buttons">
+    <div class="is-not-visible quick-buttons">
       <div action-start="true" class="quick-button">
         <div class="quick-button__icon">
           <div class="quick-button__icon-inside"><span class="bem-font-icon is-icon-in-quick-buttons"></span>
@@ -478,6 +478,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <script type="text/javascript" src="https://maciejsaw.github.io/moodlight-pro/scripts.js"></script>
+  <script type="text/javascript" src="/scripts.js"></script>
+  <script>
+    var scriptsToLoad = [
+    	'/scripts.js'
+    ];
+    var cssFilesToLoad = [
+    	"/plugins-and-libraries/tooltipster/tooltipster.bundle.min.css",
+    	"/main-code/v1/general/tooltipster-additional-themes.css",
+    	"/main-code/v1/general/additional-custom-css.css"
+    ]; 
+    var absoluteLinkPrefix = "https://maciejsaw.github.io/moodlight-pro";
+    if (window.location.host === 'moodlight-2-0-free-online-strobe-party.webflow.io') {
+    	scriptsToLoad.forEach(function(src) {
+    	  	var script = document.createElement('script');
+    	  	script.src = absoluteLinkPrefix+src;
+    	  	script.async = false;
+    	  	document.body.appendChild(script);
+    	});
+    	cssFilesToLoad.forEach(function(href) {
+    		var link = document.createElement('link');
+    		link.rel = "stylesheet";
+    		link.type = "text/css";
+    		link.href = absoluteLinkPrefix+href;
+    		document.head.appendChild(link);	
+    	});
+    }
+  </script>
 </body>
 </html>

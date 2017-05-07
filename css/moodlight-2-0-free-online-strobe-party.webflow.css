@@ -728,12 +728,16 @@ a:hover {
   -ms-flex-align: center;
   align-items: center;
   opacity: 0;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
 }
 
 .quick-buttons:hover {
   opacity: 0.31;
+}
+
+.quick-buttons.is-not-visible {
+  opacity: 0;
 }
 
 .quick-button {
@@ -784,6 +788,9 @@ a:hover {
 @media (max-width: 479px) {
   .quick-buttons {
     opacity: 0.31;
+  }
+  .body {
+    background-color: #010918;
   }
 }
 

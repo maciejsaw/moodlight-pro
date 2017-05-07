@@ -18,6 +18,8 @@
       Maciej Sawicki
   </author>
 
+  <plugin name="cordova-plugin-splashscreen" source="npm" />
+
   <preference name="SplashScreen" value="splash" />
 
   <icon src="icon.png" />

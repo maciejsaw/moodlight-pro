@@ -29,8 +29,6 @@
   <preference name="SplashMaintainAspectRatio" value="true" />
   <splash src="splash.png" />
   
-
-
   <icon src="icon.png" />
 
 

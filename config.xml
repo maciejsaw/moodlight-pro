@@ -21,7 +21,11 @@
   <plugin name="cordova-plugin-splashscreen" spec="~4.0.3" />
   <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
 
-  <preference name="SplashScreen" value="splash" />
+  <preference name="SplashScreen" value="screen" />
+  <preference name="SplashScreenDelay" value="50000" />
+  <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="SplashScreenBackgroundColor" value="green" />
+  <preference name="SplashMaintainAspectRatio" value="true" />
 
   <icon src="icon.png" />
   <splash src="splash.png" />
@@ -31,7 +35,7 @@
   </edit-config>
 
   <preference name="fullscreen" value="true" /> <!-- all: hides the status bar at the top of the screen -->
-  <preference name="SplashMaintainAspectRatio" value="true" />
+
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
   <preference name="BackgroundColor" value="0xff000918"/>

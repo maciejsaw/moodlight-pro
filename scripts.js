@@ -2399,6 +2399,7 @@ ReactiveLocalStorage.setDefaultParam('fullscreen', 'false');
 function enterFullscreenMode() {
     $(".left-menu").addClass('is-hidden'); 
     $('.body-wrapper').addClass('is-fullscreen');
+    $('.quick-buttons').removeClass('is-not-visible');
     if (ReactiveLocalStorage.getParam('fullscreen') !== 'true') {
         ReactiveLocalStorage.setParam('fullscreen', 'true');
     }
@@ -2407,6 +2408,7 @@ function enterFullscreenMode() {
 function exitFullscreenMode() {
     $('.left-menu').removeClass('is-hidden'); 
     $('.body-wrapper').removeClass('is-fullscreen');
+    $('.quick-buttons').addClass('is-not-visible');
     if (ReactiveLocalStorage.getParam('fullscreen') !== 'false') {
         ReactiveLocalStorage.setParam('fullscreen', 'false');
     }
@@ -2473,6 +2475,8 @@ $(document).on('click touchstart', '.left-menu', function(event) {
 
     event.stopPropagation(); //to prevent bubbling to body-wrapper which exited fullscreen
 });
+
+//
 
 
 

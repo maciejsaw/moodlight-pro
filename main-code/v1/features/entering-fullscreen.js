@@ -4,6 +4,7 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 
 		if (typeof window._cordovaNative === 'undefined') {
 			$('.body-wrapper').fullscreen();
+			console.log('enter fullscreen browser mode');
 		}
 		
 		setTimeout(function() {
@@ -11,5 +12,3 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 		}, 1000);
 	}
 });
-
-//

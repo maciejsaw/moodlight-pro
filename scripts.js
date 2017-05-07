@@ -2855,8 +2855,9 @@ ReactiveLocalStorage.retriggerOnParamChange('color__4');
 ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 	if (value === 'started') {
 
-		if (typeof window.cordova === 'undefined') {
+		if (typeof window._cordovaNative === 'undefined') {
 			$('.body-wrapper').fullscreen();
+			console.log('enter fullscreen browser mode');
 		}
 		
 		setTimeout(function() {
@@ -2864,8 +2865,6 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 		}, 1000);
 	}
 });
-
-//
 
 $(document).on('click', '[action-play-preset-1]', function() {
 	triggerPlayOfPresetOfIndexX(0);

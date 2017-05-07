@@ -2865,6 +2865,8 @@ ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 	}
 });
 
+//
+
 $(document).on('click', '[action-play-preset-1]', function() {
 	triggerPlayOfPresetOfIndexX(0);
 });

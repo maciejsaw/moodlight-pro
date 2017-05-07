@@ -18,7 +18,8 @@
       Maciej Sawicki
   </author>
 
-  <plugin name="cordova-plugin-splashscreen" source="npm" />
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.3" />
+  <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
 
   <preference name="SplashScreen" value="splash" />
 
@@ -31,7 +32,6 @@
 
   <preference name="fullscreen" value="true" /> <!-- all: hides the status bar at the top of the screen -->
   <preference name="SplashMaintainAspectRatio" value="true" />
-  <preference name="show-splash-screen-spinner" value="false" />
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
   <preference name="BackgroundColor" value="0xff000918"/>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    id          = "com.maciejsawicki.moodlightpro"
+    versionCode = "11"
+    version     = "1.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Moodlight.PRO</name>
+
+  <description>
+      Strobe and disco light for pros
+  </description>
+
+  <author href="https://maciejsawicki.com" email="kontakt.multiakademia@gmail.comm">
+      Maciej Sawicki
+  </author>
+
+  <icon src="icon.png" />
+
+  <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+     <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+  </edit-config>
+
+  <preference name="fullscreen" value="true" /> <!-- all: hides the status bar at the top of the screen -->
+  <preference name="SplashMaintainAspectRatio" value="true" />
+  <preference name="show-splash-screen-spinner" value="false" />
+  <preference name="AllowInlineMediaPlayback" value="true" />
+  <preference name="KeepRunning" value="false"/>
+  <preference name="BackgroundColor" value="0xff000918"/>
+
+  <access origin="*"/>
+  <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
+  <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
+  <plugin name="cordova-plugin-whitelist" version="1" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <platform name="android">
+      <allow-intent href="market:*" />
+  </platform>
+  <platform name="ios">
+      <allow-intent href="itms:*" />
+      <allow-intent href="itms-apps:*" />
+  </platform>
+
+</widget>

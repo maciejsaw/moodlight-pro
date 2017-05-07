@@ -18,17 +18,21 @@
       Maciej Sawicki
   </author>
 
-  <plugin name="cordova-plugin-splashscreen"/>
   <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
 
+
+  <plugin name="cordova-plugin-splashscreen"/>
   <preference name="SplashScreen" value="screen" />
   <!-- <preference name="SplashScreenDelay" value="50000" /> -->
   <preference name="AutoHideSplashScreen" value="true" />
   <preference name="SplashScreenBackgroundColor" value="#000918" />
   <preference name="SplashMaintainAspectRatio" value="true" />
+  <splash src="splash.png" />
+  
+
 
   <icon src="icon.png" />
-  <splash src="splash.png" />
+
 
   <preference name="fullscreen" value="true" /> <!-- all: hides the status bar at the top of the screen -->
 

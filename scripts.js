@@ -2852,16 +2852,16 @@ ReactiveLocalStorage.retriggerOnParamChange('color__3');
 ReactiveLocalStorage.retriggerOnParamChange('color__4');
 
 //this will automatically go into fullscreen mode whenever play is triggered
-ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
-	if (value === 'started') {
-		$('.body-wrapper').fullscreen();
-		setTimeout(function() {
-			enterFullscreenMode(); //also hides the menu
-		}, 1000);
-	}
-});		
-
-
+if (typeof window.cordova === 'undefined') {
+	ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
+		if (value === 'started') {
+			$('.body-wrapper').fullscreen();
+			setTimeout(function() {
+				enterFullscreenMode(); //also hides the menu
+			}, 1000);
+		}
+	});		
+}
 
 $(document).on('click', '[action-play-preset-1]', function() {
 	triggerPlayOfPresetOfIndexX(0);

@@ -2,7 +2,7 @@
 ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
 	if (value === 'started') {
 
-		if (typeof window.cordova === 'undefined') {
+		if (typeof window._cordovaNative === 'undefined') {
 			$('.body-wrapper').fullscreen();
 		}
 		

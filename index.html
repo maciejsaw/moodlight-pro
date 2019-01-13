@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sun Jan 13 2019 11:24:21 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Jan 13 2019 11:44:51 GMT+0000 (UTC)  -->
 <html data-wf-page="58e7da07da41412c17089488" data-wf-site="58e7da07da41412c17089487">
 <head>
   <meta charset="utf-8">
@@ -120,241 +120,719 @@
             <div class="controlling-element__label">Colors</div>
             <div class="controlling-element__header-line"></div>
           </div>
-          <div class="colors-dropdown-list">
-            <div action-select-dropdown="color__1" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
-              <div data-delay="0" class="bem-select-dropdown w-dropdown">
-                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
-                  <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
-                    <div class="color-symbol-icon is-white"></div>
-                  </div>
-                  <div chosen-value="null" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-null"></div>
-                  </div>
-                  <div chosen-value="black" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-black"></div>
-                  </div>
-                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-lime"></div>
-                  </div>
-                  <div chosen-value="red" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-red"></div>
-                  </div>
-                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-blue"></div>
-                  </div>
-                  <div class="bem-select-dropdown__button-arrow">
-                    <div class="bem-select-dropdown__button-arrow-icon"></div>
-                  </div>
-                </div>
-                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
-                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-null"></div>
-                    </div>
-                  </div>
-                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+          <div class="colors-dropdowns-rows">
+            <div class="colors-dropdown-list">
+              <div action-select-dropdown="color__1" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
                       <div class="color-symbol-icon is-white"></div>
                     </div>
-                  </div>
-                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-black"></div>
                     </div>
-                  </div>
-                  <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-red"></div>
-                    </div>
-                  </div>
-                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-lime"></div>
                     </div>
-                  </div>
-                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-blue"></div>
                     </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
                   </div>
-                </nav>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__2" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__3" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__4" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
-            <div action-select-dropdown="color__2" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
-              <div data-delay="0" class="bem-select-dropdown w-dropdown">
-                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
-                  <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
-                    <div class="color-symbol-icon is-white"></div>
-                  </div>
-                  <div chosen-value="null" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-null"></div>
-                  </div>
-                  <div chosen-value="black" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-black"></div>
-                  </div>
-                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-lime"></div>
-                  </div>
-                  <div chosen-value="red" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-red"></div>
-                  </div>
-                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-blue"></div>
-                  </div>
-                  <div class="bem-select-dropdown__button-arrow">
-                    <div class="bem-select-dropdown__button-arrow-icon"></div>
-                  </div>
-                </div>
-                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
-                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-null"></div>
-                    </div>
-                  </div>
-                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+            <div js-colors-row-num="2" class="colors-dropdown-list is-another is-hidden">
+              <div action-select-dropdown="color__5" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
                       <div class="color-symbol-icon is-white"></div>
                     </div>
-                  </div>
-                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-black"></div>
                     </div>
-                  </div>
-                  <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-red"></div>
-                    </div>
-                  </div>
-                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-lime"></div>
                     </div>
-                  </div>
-                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-blue"></div>
                     </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
                   </div>
-                </nav>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__6" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__7" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__8" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
-            <div action-select-dropdown="color__3" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
-              <div data-delay="0" class="bem-select-dropdown w-dropdown">
-                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
-                  <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
-                    <div class="color-symbol-icon is-white"></div>
-                  </div>
-                  <div chosen-value="null" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-null"></div>
-                  </div>
-                  <div chosen-value="black" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-black"></div>
-                  </div>
-                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-lime"></div>
-                  </div>
-                  <div chosen-value="red" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-red"></div>
-                  </div>
-                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-blue"></div>
-                  </div>
-                  <div class="bem-select-dropdown__button-arrow">
-                    <div class="bem-select-dropdown__button-arrow-icon"></div>
-                  </div>
-                </div>
-                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
-                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-null"></div>
-                    </div>
-                  </div>
-                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+            <div js-colors-row-num="3" class="colors-dropdown-list is-another is-hidden">
+              <div action-select-dropdown="color__9" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
                       <div class="color-symbol-icon is-white"></div>
                     </div>
-                  </div>
-                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-black"></div>
                     </div>
-                  </div>
-                  <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-red"></div>
-                    </div>
-                  </div>
-                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-lime"></div>
                     </div>
-                  </div>
-                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-blue"></div>
                     </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
                   </div>
-                </nav>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
               </div>
-            </div>
-            <div action-select-dropdown="color__4" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
-              <div data-delay="0" class="bem-select-dropdown w-dropdown">
-                <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
-                  <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
-                    <div class="color-symbol-icon is-white"></div>
-                  </div>
-                  <div chosen-value="null" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-null"></div>
-                  </div>
-                  <div chosen-value="black" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-black"></div>
-                  </div>
-                  <div chosen-value="lime" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-lime"></div>
-                  </div>
-                  <div chosen-value="red" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-red"></div>
-                  </div>
-                  <div chosen-value="blue" class="chosen-color-holder is-hidden">
-                    <div class="color-symbol-icon is-blue"></div>
-                  </div>
-                  <div class="bem-select-dropdown__button-arrow">
-                    <div class="bem-select-dropdown__button-arrow-icon"></div>
-                  </div>
-                </div>
-                <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
-                  <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-null"></div>
-                    </div>
-                  </div>
-                  <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+              <div action-select-dropdown="color__10" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
                       <div class="color-symbol-icon is-white"></div>
                     </div>
-                  </div>
-                  <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-black"></div>
                     </div>
-                  </div>
-                  <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
-                      <div class="color-symbol-icon is-red"></div>
-                    </div>
-                  </div>
-                  <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-lime"></div>
                     </div>
-                  </div>
-                  <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
-                    <div class="color-choice-in-dropdown">
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
                       <div class="color-symbol-icon is-blue"></div>
                     </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
                   </div>
-                </nav>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__11" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div action-select-dropdown="color__12" skip-setting-first-available-value-as-default="true" class="colors-dropdown">
+                <div data-delay="0" class="bem-select-dropdown w-dropdown">
+                  <div class="bem-select-dropdown__button for-color-icon w-dropdown-toggle">
+                    <div color-chosen-template="true" chosen-value="white" class="chosen-color-holder">
+                      <div class="color-symbol-icon is-white"></div>
+                    </div>
+                    <div chosen-value="null" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-null"></div>
+                    </div>
+                    <div chosen-value="black" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-black"></div>
+                    </div>
+                    <div chosen-value="lime" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-lime"></div>
+                    </div>
+                    <div chosen-value="red" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-red"></div>
+                    </div>
+                    <div chosen-value="blue" class="chosen-color-holder is-hidden">
+                      <div class="color-symbol-icon is-blue"></div>
+                    </div>
+                    <div class="bem-select-dropdown__button-arrow">
+                      <div class="bem-select-dropdown__button-arrow-icon"></div>
+                    </div>
+                  </div>
+                  <nav class="bem-select-dropdown__list for-color-picker w-dropdown-list">
+                    <div choice-value="null" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-null"></div>
+                      </div>
+                    </div>
+                    <div choice-value="white" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-white"></div>
+                      </div>
+                    </div>
+                    <div choice-value="black" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-black"></div>
+                      </div>
+                    </div>
+                    <div choice-value="red" color-choice-template="true" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-red"></div>
+                      </div>
+                    </div>
+                    <div choice-value="lime" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-lime"></div>
+                      </div>
+                    </div>
+                    <div choice-value="blue" class="bem-select-dropdown__list-choice with-color-picker">
+                      <div class="color-choice-in-dropdown">
+                        <div class="color-symbol-icon is-blue"></div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>

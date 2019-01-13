@@ -5,6 +5,15 @@ ReactiveLocalStorage.setDefaultParam('color__1', 'white');
 ReactiveLocalStorage.setDefaultParam('color__2', 'black');
 ReactiveLocalStorage.setDefaultParam('color__3', 'null');
 ReactiveLocalStorage.setDefaultParam('color__4', 'null');
+ReactiveLocalStorage.setDefaultParam('color__5', 'null');
+ReactiveLocalStorage.setDefaultParam('color__6', 'null');
+ReactiveLocalStorage.setDefaultParam('color__7', 'null');
+ReactiveLocalStorage.setDefaultParam('color__8', 'null');
+ReactiveLocalStorage.setDefaultParam('color__9', 'null');
+ReactiveLocalStorage.setDefaultParam('color__10', 'null');
+ReactiveLocalStorage.setDefaultParam('color__11', 'null');
+ReactiveLocalStorage.setDefaultParam('color__12', 'null');
+
 ReactiveLocalStorage.setDefaultParam('tempoMultiplyFactor', '1');
 
 function getTempoIntervalInMilliseconds() {
@@ -20,6 +29,14 @@ var colorIndexesInReactiveLocalStorage = [
 	2,
 	3,
 	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
 ];
 
 function getColors() {
@@ -135,3 +152,5 @@ $(document).on('click', '[action-tempo-divide-4]', function() {
 
 //fix placement of last colors dropdown
 $('[action-select-dropdown="color__4"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
+$('[action-select-dropdown="color__8"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
+$('[action-select-dropdown="color__12"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');

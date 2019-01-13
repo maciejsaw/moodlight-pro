@@ -2239,6 +2239,15 @@ ReactiveLocalStorage.setDefaultParam('color__1', 'white');
 ReactiveLocalStorage.setDefaultParam('color__2', 'black');
 ReactiveLocalStorage.setDefaultParam('color__3', 'null');
 ReactiveLocalStorage.setDefaultParam('color__4', 'null');
+ReactiveLocalStorage.setDefaultParam('color__5', 'null');
+ReactiveLocalStorage.setDefaultParam('color__6', 'null');
+ReactiveLocalStorage.setDefaultParam('color__7', 'null');
+ReactiveLocalStorage.setDefaultParam('color__8', 'null');
+ReactiveLocalStorage.setDefaultParam('color__9', 'null');
+ReactiveLocalStorage.setDefaultParam('color__10', 'null');
+ReactiveLocalStorage.setDefaultParam('color__11', 'null');
+ReactiveLocalStorage.setDefaultParam('color__12', 'null');
+
 ReactiveLocalStorage.setDefaultParam('tempoMultiplyFactor', '1');
 
 function getTempoIntervalInMilliseconds() {
@@ -2254,6 +2263,14 @@ var colorIndexesInReactiveLocalStorage = [
 	2,
 	3,
 	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
 ];
 
 function getColors() {
@@ -2369,6 +2386,8 @@ $(document).on('click', '[action-tempo-divide-4]', function() {
 
 //fix placement of last colors dropdown
 $('[action-select-dropdown="color__4"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
+$('[action-select-dropdown="color__8"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
+$('[action-select-dropdown="color__12"]').find('.bem-select-dropdown__list').addClass('is-near-right-edge');
 
 ReactiveLocalStorage.setParam('startedOrStopped', 'stopped'); //always stop when refreshing the page
 
@@ -2576,6 +2595,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'black',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'false'
 	},
 	{
@@ -2586,6 +2613,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'blue',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'true'
 	},
 	{
@@ -2596,6 +2631,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'MidnightBlue',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'true'
 	}
 ]);
@@ -2675,6 +2718,14 @@ function savePreset() {
 		color__2: ReactiveLocalStorage.getParam('color__2'),
 		color__3: ReactiveLocalStorage.getParam('color__3'),
 		color__4: ReactiveLocalStorage.getParam('color__4'),
+		color__5: ReactiveLocalStorage.getParam('color__5'),
+		color__6: ReactiveLocalStorage.getParam('color__6'),
+		color__7: ReactiveLocalStorage.getParam('color__7'),
+		color__8: ReactiveLocalStorage.getParam('color__8'),
+		color__9: ReactiveLocalStorage.getParam('color__9'),
+		color__10: ReactiveLocalStorage.getParam('color__10'),
+		color__11: ReactiveLocalStorage.getParam('color__11'),
+		color__12: ReactiveLocalStorage.getParam('color__12'),
 		blendingColors: ReactiveLocalStorage.getParam('blendingColors'),
 	};
 
@@ -2757,15 +2808,14 @@ var TapTempo = (function(){
 
 })();
 
-if (Modernizr.touch) {
-  $(document).on('touchstart', '[action-tap-tempo]', function(event) {
-    TapTempo.triggerCalculation();
-  });
-} else {
-  $(document).on('mousedown', '[action-tap-tempo]', function(event) {
-    TapTempo.triggerCalculation();
-  });
-}
+$(document).on('mousedown.taptempo', '[action-tap-tempo]', function(event) {
+  TapTempo.triggerCalculation();
+});
+
+$(document).on('touchstart', '[action-tap-tempo]', function(event) {
+  TapTempo.triggerCalculation();
+  $(document).off('mousedown.taptempo');
+});
 
 $(document).on('tempoSetByTapping', function(event, bpm) {
   ReactiveLocalStorage.setParam('tempo', bpm);
@@ -2850,6 +2900,14 @@ ReactiveLocalStorage.retriggerOnParamChange('color__1');
 ReactiveLocalStorage.retriggerOnParamChange('color__2');
 ReactiveLocalStorage.retriggerOnParamChange('color__3');
 ReactiveLocalStorage.retriggerOnParamChange('color__4');
+ReactiveLocalStorage.retriggerOnParamChange('color__5');
+ReactiveLocalStorage.retriggerOnParamChange('color__6');
+ReactiveLocalStorage.retriggerOnParamChange('color__7');
+ReactiveLocalStorage.retriggerOnParamChange('color__8');
+ReactiveLocalStorage.retriggerOnParamChange('color__9');
+ReactiveLocalStorage.retriggerOnParamChange('color__10');
+ReactiveLocalStorage.retriggerOnParamChange('color__11');
+ReactiveLocalStorage.retriggerOnParamChange('color__12');
 
 //this will automatically go into fullscreen mode whenever play is triggered
 ReactiveLocalStorage.onParamChange('startedOrStopped', function(value) {
@@ -2897,5 +2955,21 @@ $(document).on('click.enableNoSleep', '[action-start]', function() {
 	enableNoSleep();
 });
 
+
+ReactiveLocalStorage.onParamChange('color__4', function(value) {
+  if (value !== 'null') {
+    $('[js-colors-row-num="2"]').removeClass('is-hidden');
+  } else {
+    $('[js-colors-row-num="2"]').addClass('is-hidden');
+  }
+});
+
+ReactiveLocalStorage.onParamChange('color__8', function(value) {
+  if (value !== 'null') {
+    $('[js-colors-row-num="3"]').removeClass('is-hidden');
+  } else {
+    $('[js-colors-row-num="3"]').addClass('is-hidden');
+  }
+});
 
 //# sourceMappingURL=scripts.js.map

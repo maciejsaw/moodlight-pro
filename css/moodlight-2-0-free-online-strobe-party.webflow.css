@@ -412,6 +412,14 @@ a:hover {
   justify-content: space-between;
 }
 
+.colors-dropdown-list.is-another {
+  margin-top: 8px;
+}
+
+.colors-dropdown-list.is-another.is-hidden {
+  display: none;
+}
+
 .logo-section {
   margin-top: -1px;
   margin-bottom: 22px;

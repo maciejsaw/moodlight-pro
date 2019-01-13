@@ -64,15 +64,14 @@ var TapTempo = (function(){
 
 })();
 
-if (Modernizr.touch) {
-  $(document).on('touchstart', '[action-tap-tempo]', function(event) {
-    TapTempo.triggerCalculation();
-  });
-} else {
-  $(document).on('mousedown', '[action-tap-tempo]', function(event) {
-    TapTempo.triggerCalculation();
-  });
-}
+$(document).on('mousedown.taptempo', '[action-tap-tempo]', function(event) {
+  TapTempo.triggerCalculation();
+});
+
+$(document).on('touchstart', '[action-tap-tempo]', function(event) {
+  TapTempo.triggerCalculation();
+  $(document).off('mousedown.taptempo');
+});
 
 $(document).on('tempoSetByTapping', function(event, bpm) {
   ReactiveLocalStorage.setParam('tempo', bpm);

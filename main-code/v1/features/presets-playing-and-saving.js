@@ -7,6 +7,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'black',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'false'
 	},
 	{
@@ -17,6 +25,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'blue',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'true'
 	},
 	{
@@ -27,6 +43,14 @@ ReactiveLocalStorage.setDefaultParam('listOfPresets', [
 		color__2: 'MidnightBlue',
 		color__3: 'null',
 		color__4: 'null',
+		color__5: 'null',
+		color__6: 'null',
+		color__7: 'null',
+		color__8: 'null',
+		color__9: 'null',
+		color__10: 'null',
+		color__11: 'null',
+		color__12: 'null',
 		blendingColors: 'true'
 	}
 ]);
@@ -106,6 +130,14 @@ function savePreset() {
 		color__2: ReactiveLocalStorage.getParam('color__2'),
 		color__3: ReactiveLocalStorage.getParam('color__3'),
 		color__4: ReactiveLocalStorage.getParam('color__4'),
+		color__5: ReactiveLocalStorage.getParam('color__5'),
+		color__6: ReactiveLocalStorage.getParam('color__6'),
+		color__7: ReactiveLocalStorage.getParam('color__7'),
+		color__8: ReactiveLocalStorage.getParam('color__8'),
+		color__9: ReactiveLocalStorage.getParam('color__9'),
+		color__10: ReactiveLocalStorage.getParam('color__10'),
+		color__11: ReactiveLocalStorage.getParam('color__11'),
+		color__12: ReactiveLocalStorage.getParam('color__12'),
 		blendingColors: ReactiveLocalStorage.getParam('blendingColors'),
 	};
 

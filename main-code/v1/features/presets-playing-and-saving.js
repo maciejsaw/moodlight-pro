@@ -152,3 +152,12 @@ function updatePresetName(presetId, newName) {
 	});
 }
 
+QueryStringRouter.onParamChange('startPreset', function(value) {
+	if (typeof value !== 'undefined') {
+		console.log("Starting preset "+value);
+		setTimeout(function() {
+			playPresetById(value);
+		}, 1000);
+	}
+});
+
